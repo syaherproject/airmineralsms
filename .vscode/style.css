@@ -1,0 +1,89 @@
+/* =====================================================
+   SMS Air Mineral — gaya bersama untuk semua halaman
+   Ubah warna/komponen di sini, semua halaman ikut berubah.
+   ===================================================== */
+:root{
+  --forest:#075b35; --deep:#04341f; --green:#0b7547; --panel:#0b6e45;
+  --red:#d9231d; --blue:#169bd5; --ice:#eef9fb; --soft:#f5faf8;
+  --ink:#10362a; --muted:#66766f; --line:#e3ece8; --yellow:#ffd43b;
+}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Fira Sans",sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+h1,h2,h3,h4,.brand-font{font-family:"Manrope","Fira Sans",sans-serif}
+::selection{background:#bfe9f5;color:var(--deep)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+@keyframes heroUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-18px,0)}}
+
+/* ---------- Header ---------- */
+.site-header-placeholder{min-height:76px;background:var(--panel)}
+.site-header{position:sticky;top:0;z-index:50;width:100%;background:var(--panel);border-bottom:1px solid rgba(255,255,255,.1);transition:box-shadow .3s}
+.site-header.scrolled{box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.scroll-progress{position:absolute;left:0;bottom:-1px;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--yellow),#7bd6f5)}
+.nav-link{position:relative}
+.nav-link::after{content:"";position:absolute;left:50%;bottom:-6px;width:0;height:2px;border-radius:99px;background:var(--yellow);transform:translateX(-50%);transition:width .25s ease}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+
+/* ---------- Banner halaman dalam ---------- */
+.page-banner{position:relative;isolation:isolate;overflow:hidden;color:#fff;padding:4.5rem 0 7rem;
+  background:radial-gradient(90% 120% at 100% 0%,rgba(255,255,255,.15),transparent 55%),linear-gradient(135deg,var(--panel),var(--deep))}
+.page-banner::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(circle at 75% 20%,#000,transparent 70%);mask-image:radial-gradient(circle at 75% 20%,#000,transparent 70%)}
+.page-banner::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:56px;background:var(--next,#fff);clip-path:ellipse(58% 100% at 50% 100%)}
+.page-banner__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.page-banner__shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,52,31,.88),rgba(4,52,31,.55) 45%,rgba(4,52,31,.95))}
+.page-banner .ring{position:absolute;z-index:-1;border-radius:50%;border:1px solid rgba(255,255,255,.14);pointer-events:none;animation:drift 9s ease-in-out infinite}
+.page-banner .ring.a{width:520px;height:520px;right:-170px;top:-190px}
+.page-banner .ring.b{width:320px;height:320px;left:-110px;bottom:-130px;animation-delay:-4s}
+.page-banner__inner{animation:heroUp .8s ease both}
+.crumbs{display:flex;justify-content:center;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.7)}
+.crumbs a:hover{color:#fff}
+.chip{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.1rem;padding:.5rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);backdrop-filter:blur(10px);font-size:11px;font-weight:800;letter-spacing:.16em}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--yellow)}
+.grad-text{background:linear-gradient(90deg,#9be3f7,#fff 55%,var(--yellow));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- Komponen umum ---------- */
+.water-orb{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(123,214,245,.28),rgba(22,155,213,.04) 65%,transparent 70%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--red);border-radius:99px}
+.section-title{font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.08;font-weight:800;letter-spacing:-.04em}
+.soft-card{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);background:rgba(255,255,255,.92);box-shadow:0 18px 50px rgba(4,52,31,.07)}
+.soft-card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;z-index:2;background:linear-gradient(90deg,var(--blue),var(--green),var(--red));opacity:0;transition:opacity .3s}
+.soft-card:hover::before{opacity:1}
+.soft-card img{transition:transform .7s ease}
+.soft-card:hover img{transform:scale(1.06)}
+.soft-card .rounded-2xl{transition:transform .35s ease}
+.soft-card:hover .rounded-2xl{transform:scale(1.08) rotate(-3deg)}
+.lift{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.lift:hover{transform:translateY(-7px);box-shadow:0 24px 55px rgba(4,52,31,.13);border-color:#c8ddd5}
+.btn-yellow{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 2rem;border-radius:999px;background:var(--yellow);color:var(--deep);font-family:"Manrope",sans-serif;font-weight:800;font-size:1rem;box-shadow:0 12px 26px rgba(0,0,0,.2);transition:transform .25s ease,box-shadow .25s ease,background .25s}
+.btn-yellow:hover{transform:translateY(-3px);background:#ffe066;box-shadow:0 18px 34px rgba(0,0,0,.26)}
+.btn-yellow svg{transition:transform .25s ease}.btn-yellow:hover svg{transform:translateX(4px)}
+.cta-grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(circle at 70% 30%,#000,transparent 70%);mask-image:radial-gradient(circle at 70% 30%,#000,transparent 70%)}
+
+/* FAQ */
+.faq-item{transition:all .25s ease;border:1px solid var(--line);border-radius:20px}
+.faq-item:hover{border-color:#b8d9cb}
+.faq-item.active{border-color:#b8d9cb;box-shadow:0 15px 35px rgba(4,52,31,.07);background:#f7fcfa}
+.faq-answer{display:none}
+.faq-item.active .faq-answer{display:block;animation:heroUp .35s ease both}
+.faq-item.active .faq-icon{transform:rotate(180deg)}
+
+/* ---------- Footer & WhatsApp ---------- */
+.site-footer{position:relative;background:#022718}
+.site-footer::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--blue),var(--green),var(--yellow),var(--red))}
+.footer-h{font-family:"Manrope",sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#9be3f7;margin:0 0 1rem}
+.footer-link{color:rgba(255,255,255,.7);font-size:.875rem;transition:color .2s,padding .2s}
+.footer-link:hover{color:#fff;padding-left:4px}
+#whatsapp-float{transition:opacity .45s ease,transform .45s ease,background .2s}
+#whatsapp-float::before{content:"";position:absolute;inset:0;border-radius:999px;box-shadow:0 0 0 0 rgba(37,211,102,.55);animation:waPing 2.4s ease-out infinite;pointer-events:none}
+@keyframes waPing{to{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+
+/* ---------- Animasi muncul saat scroll ---------- */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(max-width:767px){.water-orb{width:230px;height:230px}.page-banner{padding:3.5rem 0 6rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}

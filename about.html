@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil perusahaan, sejarah, proses produksi, serta struktur organisasi PT Agrimitra Utama Persada - SMS Air Mineral.">
+  <title>Tentang Kami | SMS Air Mineral</title>
+
+  <!-- Font & Library Eksternal -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root{
+      --panel:#0b6e45;
+      --forest:#075b35;
+      --deep:#04341f;
+      --green:#0b7547;
+      --red:#d9231d;
+      --blue:#169bd5;
+      --ice:#eef9fb;
+      --ink:#10362a;
+      --muted:#66766f;
+      --line:#e3ece8;
+    }
+
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Fira Sans",sans-serif;
+      color:var(--ink);
+      background:#fff;
+      overflow-x:hidden;
+    }
+    h1,h2,h3,h4,.brand-font{font-family:"Manrope","Fira Sans",sans-serif}
+    ::selection{background:#bfe9f5;color:var(--deep)}
+
+    /* NAVBAR SAMA PERSIS INDEX */
+    .site-header{
+      background:var(--panel);
+      backdrop-filter:none;
+      -webkit-backdrop-filter:none;
+      border-bottom:1px solid rgba(255,255,255,.1);
+      transition:all .3s ease;
+    }
+    .site-header.scrolled{
+      background:var(--panel);
+      box-shadow:0 8px 28px rgba(0,0,0,.2);
+    }
+    .nav-link{position:relative}
+    .nav-link::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      bottom:-6px;
+      width:0;
+      height:2px;
+      border-radius:99px;
+      background:#ffd43b;
+      transform:translateX(-50%);
+      transition:width .25s ease;
+    }
+    .nav-link:hover::after,.nav-link.active::after{width:100%}
+
+    /* FLOATING DECOR */
+    .water-orb{
+      position:absolute;
+      width:360px;height:360px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 30%,rgba(123,214,245,.28),rgba(22,155,213,.04) 65%,transparent 70%);
+      filter:blur(1px);
+      pointer-events:none;
+    }
+
+    /* GENERAL */
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--green);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:28px;height:2px;
+      background:var(--red);
+      border-radius:99px;
+    }
+    .section-title{
+      font-size:clamp(1.8rem,3.5vw,3rem);
+      line-height:1.08;
+      font-weight:800;
+      letter-spacing:-.04em;
+    }
+    .soft-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.88);
+      box-shadow:0 18px 50px rgba(4,52,31,.07);
+    }
+    .lift{
+      transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
+    }
+    .lift:hover{
+      transform:translateY(-7px);
+      box-shadow:0 24px 55px rgba(4,52,31,.12);
+      border-color:#c8ddd5;
+    }
+
+    /* WHATSAPP */
+    #whatsapp-float{transition:opacity .45s ease,transform .45s ease}
+
+    @media(max-width:767px){
+      .water-orb{width:230px;height:230px}
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white">
+
+  <!-- HEADER NAVIGASI -->
+  <header id="site-header" class="site-header sticky top-0 z-50 w-full">
+    <nav class="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-3 sm:px-8">
+      <a href="index.html" class="shrink-0">
+        <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-10 w-auto object-contain sm:h-12">
+      </a>
+      <div class="hidden items-center gap-7 md:flex lg:gap-10">
+        <a href="index.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Beranda</a>
+        <a href="about.html" class="nav-link active text-[13px] font-extrabold uppercase tracking-wide text-white lg:text-sm">Tentang Kami</a>
+        <a href="products.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Produk</a>
+        <a href="distributors.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Cari Agen Kami</a>
+        <a href="contact.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Hubungi Kami</a>
+      </div>
+      <button id="menu-toggle" type="button" class="rounded-xl p-2 text-white md:hidden" aria-label="Buka menu">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#0b6e45] px-4 pb-5 pt-2 md:hidden">
+      <div class="flex flex-col gap-1 text-sm font-extrabold uppercase tracking-wide text-white">
+        <a href="index.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Beranda</a>
+        <a href="about.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Tentang Kami</a>
+        <a href="products.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Produk</a>
+        <a href="distributors.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Cari Agen Kami</a>
+        <a href="contact.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE BANNER HERO -->
+    <section class="relative overflow-hidden bg-[#04341f] py-16 lg:py-24 text-white shadow-2xl">
+      <img src="Aset foto/pabrik dari atas.png" alt="Latar Belakang SMS Air Mineral" class="absolute inset-0 h-full w-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#04341f]/90 via-[#04341f]/40 to-[#04341f]/95 backdrop-blur-[1px]"></div>
+
+      <div class="water-orb -right-20 -top-20 z-10"></div>
+      <div class="water-orb -left-20 -bottom-20 z-10"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold tracking-[.16em] backdrop-blur-md shadow-lg">
+          <span class="h-2 w-2 rounded-full bg-[#7bd6f5]"></span>
+          PROFIL PT AGRIMITRA UTAMA PERSADA
+        </span>
+        <h1 class="brand-font mt-4 text-3xl font-extrabold tracking-[-.04em] sm:text-5xl lg:text-6xl drop-shadow-lg">
+          Mengenal Lebih Dekat<br><span class="text-[#9be3f7]">SMS Air Mineral</span>
+        </h1>
+        <p class="mt-4 mx-auto max-w-2xl text-sm leading-7 text-white/90 sm:text-base drop-shadow-md">
+          Mengenal sejarah, nilai mutu, sumber mata air alami, teknologi pengolahan modern, hingga manajemen di balik kebaikan Air Mineral SMS.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. SEJARAH & PERJALANAN PERUSAHAAN -->
+    <section class="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8 space-y-8">
+        <div class="soft-card rounded-[2rem] bg-gradient-to-br from-[#f5faf8] via-white to-[#eef9fb] p-8 sm:p-12 border border-[#e3ece8] shadow-lg">
+          <span class="eyebrow">Sejarah &amp; Profil Perusahaan</span>
+          <h2 class="section-title mt-3 text-[#04341f]">
+            Cerita Perjalanan SMS Air Mineral
+          </h2>
+          
+          <div class="mt-6 space-y-4 text-sm sm:text-base leading-relaxed text-[#66766f]">
+            <p>
+              Diawali dari niat tulus pendiri perusahaan, <strong>Bapak Ir. Soehinto Sadikin</strong> dan <strong>Ibu Agnes</strong>, untuk membagikan kebahagiaan serta kesehatan kepada masyarakat luas melalui air minum murni berkualitas tinggi.
+            </p>
+            <p>
+              Berangkat dari pilar utama usaha jasa konstruksi yang telah berjalan selama 20 tahun di Sumatera Barat yaitu <strong>PT Statika Mitra Sarana</strong>, lahirlah <strong>PT Agrimitra Utama Persada</strong> pada tahun 2001 yang berspesialisasi dalam Industri Air Minum Dalam Kemasan (AMDK) dengan konotasi merek <strong>"Sumber Minuman Sehat" (SMS)</strong>.
+            </p>
+            <p>
+              Dipilih lokasi strategis di Korong Tarok, Nagari Kepalo Hilalang, Lubuk Bonta, Kec. 2x11 Kayu Tanam, Kab. Padang Pariaman. Mulai beroperasi secara profesional sejak tahun 2002 mengolah air murni dari Mata Air Pegunungan Tandikek di kaki Gunung Singgalang.
+            </p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-[#e3ece8] pt-8">
+            <div class="soft-card rounded-2xl p-5 text-center bg-white/80">
+              <p class="brand-font text-3xl font-extrabold text-[#0b7547]">2001</p>
+              <p class="text-xs font-bold text-[#04341f] mt-1">Pembangunan Pabrik AMDK</p>
+            </div>
+            <div class="soft-card rounded-2xl p-5 text-center bg-white/80">
+              <p class="brand-font text-3xl font-extrabold text-[#169bd5]">2002</p>
+              <p class="text-xs font-bold text-[#04341f] mt-1">Beroperasi Profesional</p>
+            </div>
+            <div class="soft-card rounded-2xl p-5 text-center bg-white/80">
+              <p class="brand-font text-3xl font-extrabold text-[#d9231d]">500.000</p>
+              <p class="text-xs font-bold text-[#04341f] mt-1">Kapasitas Karton / Bulan</p>
+            </div>
+          </div>
+        </div>
+
+    <!-- VISI & MISI PERUSAHAAN -->
+    <section class="relative overflow-hidden bg-[#04341f] py-16 sm:py-20 lg:py-24 text-white">
+      <div class="water-orb -right-24 -top-24 z-0 opacity-80"></div>
+      <div class="water-orb -left-24 -bottom-24 z-0 opacity-80"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <h2 class="brand-font text-3xl font-extrabold sm:text-4xl lg:text-5xl text-white">
+            Visi &amp; Misi Perusahaan
+          </h2>
+          <p class="mt-3 text-xs sm:text-sm text-white/80 max-w-xl mx-auto">
+            Komitmen tulus PT Agrimitra Utama Persada dalam menghadirkan hidrasi sehat dan kualitas terbaik bagi seluruh masyarakat Indonesia.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10 items-stretch">
+          <div class="rounded-3xl border border-white/15 bg-white/10 p-8 sm:p-10 lg:p-12 backdrop-blur-md flex flex-col justify-between shadow-2xl">
+            <div>
+              <span class="brand-font block text-xs font-extrabold uppercase tracking-widest text-[#9be3f7] mb-4">
+                Visi Utama
+              </span>
+              <h3 class="brand-font text-2xl font-extrabold leading-snug text-white sm:text-3xl lg:text-4xl">
+                Menjadi Salah Satu Perusahaan Air Minum dalam Kemasan (AMDK) Terbaik di Indonesia
+              </h3>
+              <p class="mt-6 text-sm sm:text-base leading-relaxed text-white/85">
+                Menjadi produsen terpercaya yang dikenal atas mutu produk, kemurnian sumber air pegunungan alami, serta komitmen tulus dalam menyediakan hidrasi sehat bagi seluruh masyarakat Indonesia.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-white/15 bg-white/10 p-8 sm:p-10 lg:p-12 backdrop-blur-md flex flex-col justify-between shadow-2xl">
+            <div>
+              <span class="brand-font block text-xs font-extrabold uppercase tracking-widest text-[#9be3f7] mb-4">
+                Misi Perusahaan
+              </span>
+              <div class="space-y-6 pt-1">
+                <div>
+                  <h4 class="text-xl sm:text-2xl font-extrabold text-white">
+                    Produk Kompetitif &amp; Berkualitas
+                  </h4>
+                  <p class="mt-2 text-xs sm:text-sm leading-relaxed text-white/80">
+                    Menciptakan produk air minum dalam kemasan yang kompetitif, aman, dan berkualitas tinggi bagi seluruh konsumen.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="text-xl sm:text-2xl font-extrabold text-white">
+                    Market Leader AMDK
+                  </h4>
+                  <p class="mt-2 text-xs sm:text-sm leading-relaxed text-white/80">
+                    Menjadi Market Leader di bidang penjualan Air Mineral AMDK khususnya di wilayah Indonesia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SUMBER MATA AIR & FASILITAS PABRIK -->
+    <section class="bg-white py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="eyebrow">Keunggulan Sumber Alam</span>
+          <h2 class="section-title mt-3 text-[#04341f]">Sumber Mata Air Mineral SMS</h2>
+          <p class="mt-3 text-sm text-[#66766f]">
+            Terletak di Desa Andalas, bersumber langsung dari Pegunungan Tandikek di kaki Gunung Singgalang, Kabupaten Padang Pariaman.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
+            <img src="Aset foto/pabrik dari atas.png" alt="Mata Air Pegunungan Tandikek" class="h-48 w-full object-cover">
+            <div class="p-6">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-[#e4f7fb] px-3 py-1 text-xs font-bold text-[#169bd5]">
+                <i data-lucide="mountain" class="h-3.5 w-3.5"></i> Terlindungi Alami
+              </span>
+              <h3 class="mt-3 text-lg font-bold text-[#04341f]">Mata Air Alami & Penurap Steril</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
+                Mata air memiliki kapasitas sangat baik dan bersih. Terlindungi oleh penutup/penurap khusus agar tidak terkontaminasi udara luar serta dijaga bersama pemerintah daerah.
+              </p>
+            </div>
+          </div>
+
+          <div class="soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
+            <img src="Aset foto/Stainless Steel Water Filtration Plant.png" alt="Bak Penampungan & Pipa Milik Sendiri" class="h-48 w-full object-cover">
+            <div class="p-6">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5ed] px-3 py-1 text-xs font-bold text-[#0b7547]">
+                <i data-lucide="git-commit" class="h-3.5 w-3.5"></i> Pipa Khusus Milik Sendiri
+              </span>
+              <h3 class="mt-3 text-lg font-bold text-[#04341f]">Pipa Alir Baku Langsung ke Pabrik</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
+                Air dari mata air ditampung di Bak Penampung Air Baku dan dialirkan langsung ke pabrik pengolahan menggunakan jaringan pipa milik sendiri berbahan material pipa terbaik.
+              </p>
+            </div>
+          </div>
+
+          <div class="soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
+            <img src="Aset foto/labor.png" alt="Pengujian Laboratorium Internal" class="h-48 w-full object-cover">
+            <div class="p-6">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-[#fff0ef] px-3 py-1 text-xs font-bold text-[#d9231d]">
+                <i data-lucide="flask-conical" class="h-3.5 w-3.5"></i> Uji Berkala Laboratorium
+              </span>
+              <h3 class="mt-3 text-lg font-bold text-[#04341f]">Pengujian Sampel Air Baku</h3>
+              <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
+                Sebelum proses produksi dilakukan, petugas laboratorium secara ketat menguji sampel air baku untuk memastikan kejernihan, pH, dan kesesuaian parameter standar mutu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. JENIS BIJI PLASTIK KEMASAN -->
+    <section class="relative overflow-hidden bg-[#04341f] py-16 sm:py-20 text-white">
+      <div class="water-orb -right-28 top-20"></div>
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold text-[#9be3f7]">
+            <i data-lucide="shield-check" class="h-4 w-4"></i> Standar Keamanan Pangan (Food Grade)
+          </span>
+          <h2 class="brand-font mt-4 text-3xl font-extrabold sm:text-4xl">Jenis Biji Plastik & Peruntukan Kemasan</h2>
+          <p class="mt-3 text-xs sm:text-sm text-white/80">
+            Setiap varian kemasan SMS Air Mineral diproduksi menggunakan material biji plastik murni bersertifikat Food Grade dan BPA Free sesuai peruntukannya.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
+                <img src="Aset foto/Biji Plastik PET.jpeg" alt="Biji Plastik PET" class="h-full w-full object-cover">
+              </div>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-xs font-bold text-[#9be3f7]">PET (Polyethylene Terephthalate)</span>
+              <h3 class="mt-3 text-lg font-bold text-white">Plastik PET Food Grade</h3>
+              <p class="mt-2 text-xs text-white/70 leading-relaxed">
+                Karakteristik bening jernih, ringan, kokoh, dan kedap udara. Sangat aman dan higienis untuk menjaga kemurnian rasa air.
+              </p>
+              
+              <div class="mt-5 pt-4 border-t border-white/10">
+                <p class="text-xs font-bold text-[#9be3f7]">Diperuntukkan Untuk:</p>
+                <ul class="mt-2 space-y-1.5 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Botol 330 ml, 600 ml, & 1500 ml</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Galon PET Sekali Pakai (5L & 15L)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
+                <img src="Aset foto/Biji-Plastik-Pengertian-Jenis-Fungsi-Manfaat-Kegunaan4.jpg" alt="Biji Plastik PC" class="h-full w-full object-cover">
+              </div>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-xs font-bold text-[#9be3f7]">PC (Polycarbonate)</span>
+              <h3 class="mt-3 text-lg font-bold text-white">Plastik PC Standar Tinggi</h3>
+              <p class="mt-2 text-xs text-white/70 leading-relaxed">
+                Material sangat kuat, tahan benturan keras, serta tahan terhadap proses pencucian & sterilisasi suhu tinggi.
+              </p>
+              
+              <div class="mt-5 pt-4 border-t border-white/10">
+                <p class="text-xs font-bold text-[#9be3f7]">Diperuntukkan Untuk:</p>
+                <ul class="mt-2 space-y-1.5 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Galon Isi Ulang 19 Liter</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Kemasan yang dipakai berulang</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
+                <img src="Aset foto/Gemini_Generated_Image_xp414cxp414cxp41.jpg" alt="Biji Plastik PP" class="h-full w-full object-cover">
+              </div>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-xs font-bold text-[#9be3f7]">PP (Polypropylene)</span>
+              <h3 class="mt-3 text-lg font-bold text-white">Plastik PP Elastis & Liat</h3>
+              <p class="mt-2 text-xs text-white/70 leading-relaxed">
+                Karakteristik elastis, fleksibel, serta tahan terhadap tekanan sealing panas pada mesin pengemasan cup.
+              </p>
+              
+              <div class="mt-5 pt-4 border-t border-white/10">
+                <p class="text-xs font-bold text-[#9be3f7]">Diperuntukkan Untuk:</p>
+                <ul class="mt-2 space-y-1.5 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Kemasan Gelas Cup 220 ml</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Tutup Botol & Tutup Galon</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION STRUKTUR ORGANISASI PERUSAHAAN -->
+    <section class="bg-white py-16 sm:py-20">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8 text-center">
+        <span class="eyebrow justify-center">Manajemen & Kepemimpinan</span>
+        <h2 class="brand-font mt-3 text-3xl font-extrabold text-[#04341f] sm:text-4xl lg:text-5xl">
+          Struktur Organisasi Perusahaan
+        </h2>
+
+        <div class="mt-14 flex flex-col items-center w-full max-w-4xl mx-auto">
+          <div class="flex flex-col items-center text-center">
+            <div class="relative h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-xl">
+              <img src="Aset foto/pak manerep.jpeg" alt="Foto Direktur Utama" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/150'">
+            </div>
+            <h3 class="brand-font mt-4 text-2xl font-extrabold text-[#04341f] sm:text-3xl">
+              Ir . Manerep Mangatur Nababan
+            </h3>
+            <p class="mt-1 text-base font-bold text-[#0b7547] sm:text-lg">
+              Direktur Utama
+            </p>
+            <p class="text-xs font-semibold text-[#66766f] sm:text-sm">
+              PT Agrimitra Utama Persada
+            </p>
+          </div>
+
+          <div class="h-10 w-0.5 bg-[#0b7547]"></div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-lg">
+              <img src="Aset foto/david alwie.jpeg" alt="David Alwie" class="h-full w-full object-cover">
+            </div>
+            <h3 class="brand-font mt-4 text-xl font-extrabold text-[#04341f] sm:text-2xl">
+              David Alwie Rusdi
+            </h3>
+            <p class="mt-1 text-sm font-bold text-[#0b7547] sm:text-base">
+              General Manager
+            </p>
+            <p class="text-xs font-semibold text-[#66766f] sm:text-sm">
+              Manajemen Operasional Pusat
+            </p>
+          </div>
+
+          <div class="h-8 w-0.5 bg-[#0b7547]"></div>
+
+          <div class="w-full relative">
+            <div class="hidden sm:block absolute top-0 left-[16.666%] right-[16.666%] h-0.5 bg-[#0b7547]"></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 w-full">
+              <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
+                <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
+                <div class="block sm:hidden h-6 w-0.5 bg-[#0b7547] -mt-6 mb-2"></div>
+
+                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-3 border-[#0b7547] shadow-md">
+                  <img src="Aset foto/syahrianto.jpeg" alt="Area Sales Manager" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/120'">
+                </div>
+                <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
+                  Syahrianto
+                </h4>
+                <p class="text-xs font-bold text-[#0b7547]">
+                  Area Sales Manager
+                </p>
+                <p class="text-[11px] font-semibold text-[#66766f]">
+                  Pemasaran & Distribusi Agen
+                </p>
+              </div>
+
+              <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
+                <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
+                <div class="block sm:hidden h-6 w-0.5 bg-[#0b7547] -mt-6 mb-2"></div>
+
+                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-3 border-[#0b7547] shadow-md">
+                  <img src="Aset foto/buk novrika.jpeg" alt="Manager HRD" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/120'">
+                </div>
+                <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
+                  Novrika Sari, S.Psi., MM
+                </h4>
+                <p class="text-xs font-bold text-[#0b7547]">
+                  Manager HRD
+                </p>
+                <p class="text-[11px] font-semibold text-[#66766f]">
+                  Pengembangan SDM & Legalitas
+                </p>
+              </div>
+
+              <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
+                <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
+                <div class="block sm:hidden h-6 w-0.5 bg-[#0b7547] -mt-6 mb-2"></div>
+
+                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-3 border-[#0b7547] shadow-md">
+                  <img src="Aset foto/WhatsApp Image 2026-10-12 at 14.45.56.jpeg" alt="Muhammad Trianto Desdio" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/120'">
+                </div>
+                <h4 class="brand-font mt-4 text-base font-extrabold text-[#04341f]">
+                  Muhammad Trianto Desdio
+                </h4>
+                <p class="text-xs font-bold text-[#0b7547]">
+                  Internal Auditor
+                </p>
+                <p class="text-[11px] font-semibold text-[#66766f]">
+                  Audit Keuangan & SOP
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER MODEREN BERTEMA AIR -->
+  <footer class="relative overflow-hidden bg-[#04341f] text-white pt-12 sm:pt-16 pb-8">
+    <img src="Aset foto/SMS Bottled Water Collection.png" alt="Latar Air SMS" class="absolute inset-0 h-full w-full object-cover object-center opacity-15 pointer-events-none">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#022718] via-[#04341f]/90 to-[#04341f]/95"></div>
+
+    <div class="water-orb -left-20 -top-20 z-0 opacity-40"></div>
+    <div class="water-orb -right-20 -bottom-20 z-0 opacity-40"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-12 pb-10 sm:pb-12">
+        <div class="md:col-span-5 space-y-4 sm:space-y-5">
+          <a href="index.html" class="inline-block">
+            <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-10 w-auto object-contain sm:h-14">
+          </a>
+          <p class="text-xs sm:text-sm leading-relaxed text-white/80 max-w-md">
+            PT Agrimitra Utama Persada berkomitmen menghadirkan kesegaran dan kemurnian air murni dari Mata Air Pegunungan Tandikek untuk menjaga hidrasi sehat keluarga Anda.
+          </p>
+          <div class="pt-1">
+            <span class="block text-xs font-extrabold uppercase tracking-wider text-[#9be3f7] mb-2.5">Ikuti Kami</span>
+            <div class="flex items-center gap-3">
+              <a href="https://web.facebook.com/profile.php?id=100081930225270" target="_blank" rel="noopener noreferrer" aria-label="Facebook SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#0b7547] hover:border-[#0b7547]">
+                <i data-lucide="facebook" class="h-4 w-4"></i>
+              </a>
+              <a href="https://www.instagram.com/sms_airmineral/" target="_blank" rel="noopener noreferrer" aria-label="Instagram SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#0b7547] hover:border-[#0b7547]">
+                <i data-lucide="instagram" class="h-4 w-4"></i>
+              </a>
+              <a href="https://www.youtube.com/@SMS_WATER/" target="_blank" rel="noopener noreferrer" aria-label="YouTube SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#0b7547] hover:border-[#0b7547]">
+                <i data-lucide="youtube" class="h-4 w-4"></i>
+              </a>
+              <a href="https://wa.me/6285363287675" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#25D366] hover:border-[#25D366]">
+                <i data-lucide="message-circle" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3 sm:space-y-4">
+          <h3 class="brand-font text-sm sm:text-lg font-extrabold text-[#9be3f7] uppercase tracking-wider">
+            Navigasi Cepat
+          </h3>
+          <ul class="space-y-2 sm:space-y-2.5 text-xs sm:text-sm font-semibold text-white/80">
+            <li>
+              <a href="index.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Beranda
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Tentang Kami
+              </a>
+            </li>
+            <li>
+              <a href="products.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Katalog Produk
+              </a>
+            </li>
+            <li>
+              <a href="distributors.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Cari Agen Kami
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Hubungi Kami
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3 sm:space-y-4">
+          <h3 class="brand-font text-sm sm:text-lg font-extrabold text-[#9be3f7] uppercase tracking-wider">
+            Kontak Perusahaan
+          </h3>
+          <ul class="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/80">
+            <li class="flex items-start gap-2.5 sm:gap-3">
+              <i data-lucide="map-pin" class="h-4 w-4 sm:h-5 sm:w-5 text-[#9be3f7] shrink-0 mt-0.5"></i>
+              <span>Korong Tarok, Nagari Kepalo Hilalang, Kec. 2x11 Kayu Tanam, Kab. Padang Pariaman, Sumatera Barat.</span>
+            </li>
+            <li class="flex items-center gap-2.5 sm:gap-3">
+              <i data-lucide="mail" class="h-4 w-4 text-[#9be3f7] shrink-0"></i>
+              <a href="mailto:amdk.sms_padang@yahoo.com" class="hover:text-white hover:underline">amdk.sms_padang@yahoo.com</a>
+            </li>
+            <li class="flex items-center gap-2.5 sm:gap-3">
+              <i data-lucide="phone" class="h-4 w-4 text-[#9be3f7] shrink-0"></i>
+              <span>(0853) 6328-7675 (Cab. Padang)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/15 pt-5 sm:pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left text-xs text-white/60">
+        <p>© PT Agrimitra Utama Persada. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition">Syarat &amp; Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a id="whatsapp-float"
+     href="https://wa.me/6285363287675?text=Halo%20SMS%20Air%20Mineral,%20saya%20ingin%20pesan"
+     target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-5 right-5 z-50 flex translate-y-6 items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 font-extrabold text-white opacity-0 shadow-2xl pointer-events-none transition hover:bg-[#20ba5a] sm:bottom-7 sm:right-7">
+    <i data-lucide="message-circle" class="h-5 w-5"></i>
+    <span class="text-xs sm:text-sm">Pesan Sekarang</span>
+  </a>
+
+  <!-- LOGIKA SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+
+      // MENU MOBILE
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // HEADER SAAT SCROLL
+      const header = document.getElementById("site-header");
+      const waFloat = document.getElementById("whatsapp-float");
+
+      function handleScroll(){
+        if(window.scrollY > 30) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+
+        if(window.scrollY > 220){
+          waFloat.classList.remove("opacity-0","pointer-events-none","translate-y-6");
+          waFloat.classList.add("opacity-100","translate-y-0");
+        } else {
+          waFloat.classList.remove("opacity-100","translate-y-0");
+          waFloat.classList.add("opacity-0","pointer-events-none","translate-y-6");
+        }
+      }
+      window.addEventListener("scroll", handleScroll, {passive:true});
+      handleScroll();
+    });
+  </script>
+</body>
+</html>

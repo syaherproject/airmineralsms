@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hubungi tim layanan pelanggan SMS Air Mineral untuk pemesanan produk, informasi keagenan, atau lokasi operasional pabrik dan kantor cabang.">
+  <title>Hubungi Kami | SMS Air Mineral</title>
+
+  <!-- Font & Library Eksternal -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root{
+      --panel:#0b6e45;
+      --forest:#075b35;
+      --deep:#04341f;
+      --green:#0b7547;
+      --red:#d9231d;
+      --blue:#169bd5;
+      --ice:#eef9fb;
+      --ink:#10362a;
+      --muted:#66766f;
+      --line:#e3ece8;
+    }
+
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Fira Sans",sans-serif;
+      color:var(--ink);
+      background:#fff;
+      overflow-x:hidden;
+    }
+    h1,h2,h3,h4,.brand-font{font-family:"Manrope","Fira Sans",sans-serif}
+    ::selection{background:#bfe9f5;color:var(--deep)}
+
+    /* NAVBAR */
+    .site-header{
+      background:var(--panel);
+      backdrop-filter:none;
+      -webkit-backdrop-filter:none;
+      border-bottom:1px solid rgba(255,255,255,.1);
+      transition:all .3s ease;
+    }
+    .site-header.scrolled{
+      background:var(--panel);
+      box-shadow:0 8px 28px rgba(0,0,0,.2);
+    }
+    .nav-link{position:relative}
+    .nav-link::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      bottom:-6px;
+      width:0;
+      height:2px;
+      border-radius:99px;
+      background:#ffd43b;
+      transform:translateX(-50%);
+      transition:width .25s ease;
+    }
+    .nav-link:hover::after,.nav-link.active::after{width:100%}
+
+    /* FLOATING DECOR */
+    .water-orb{
+      position:absolute;
+      width:360px;height:360px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 30%,rgba(123,214,245,.28),rgba(22,155,213,.04) 65%,transparent 70%);
+      filter:blur(1px);
+      pointer-events:none;
+    }
+
+    /* GENERAL STYLING */
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--green);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:28px;height:2px;
+      background:var(--red);
+      border-radius:99px;
+    }
+    .section-title{
+      font-size:clamp(1.75rem,3.2vw,2.75rem);
+      line-height:1.12;
+      font-weight:800;
+      letter-spacing:-.03em;
+    }
+    .soft-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.88);
+      box-shadow:0 18px 50px rgba(4,52,31,.07);
+    }
+    .lift{
+      transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
+    }
+    .lift:hover{
+      transform:translateY(-5px);
+      box-shadow:0 20px 45px rgba(4,52,31,.1);
+      border-color:#c8ddd5;
+    }
+
+    /* MAP TAB BUTTON */
+    .map-tab-btn{
+      transition:all .25s ease;
+    }
+    .map-tab-btn.active{
+      background-color:#0b7547;
+      color:#ffffff;
+      border-color:#0b7547;
+      box-shadow:0 8px 20px rgba(11,117,71,.2);
+    }
+
+    @media(max-width:767px){
+      .water-orb{width:230px;height:230px}
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white">
+
+  <!-- HEADER NAVIGASI -->
+  <header id="site-header" class="site-header sticky top-0 z-50 w-full">
+    <nav class="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 sm:px-8">
+      <a href="index.html" class="shrink-0">
+        <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-9 w-auto object-contain sm:h-12">
+      </a>
+      <div class="hidden items-center gap-7 md:flex lg:gap-10">
+        <a href="index.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Beranda</a>
+        <a href="about.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Tentang Kami</a>
+        <a href="products.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Produk</a>
+        <a href="distributors.html" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Cari Agen Kami</a>
+        <a href="contact.html" class="nav-link active text-[13px] font-extrabold uppercase tracking-wide text-white lg:text-sm">Hubungi Kami</a>
+      </div>
+      <button id="menu-toggle" type="button" class="rounded-xl p-2 text-white md:hidden hover:bg-white/10 transition" aria-label="Buka menu">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#0b6e45] px-4 pb-5 pt-2 md:hidden">
+      <div class="flex flex-col gap-1 text-sm font-extrabold uppercase tracking-wide text-white">
+        <a href="index.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Beranda</a>
+        <a href="about.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Tentang Kami</a>
+        <a href="products.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Produk</a>
+        <a href="distributors.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Cari Agen Kami</a>
+        <a href="contact.html" class="rounded-xl px-4 py-3 bg-white/10">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO BANNER HEADER -->
+    <section class="relative overflow-hidden bg-[#04341f] py-16 sm:py-20 lg:py-24 text-white">
+      <img src="Aset foto/pabrik dari atas.png" alt="Latar Belakang SMS Air Mineral" class="absolute inset-0 h-full w-full object-cover object-center opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#04341f]/90 via-[#04341f]/75 to-[#04341f]"></div>
+
+      <div class="water-orb -right-20 -top-20 z-0 opacity-60"></div>
+      <div class="water-orb -left-20 -bottom-20 z-0 opacity-60"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold tracking-[.16em] backdrop-blur-md">
+          <span class="h-2 w-2 rounded-full bg-[#7bd6f5]"></span>
+          HUBUNGI KAMI
+        </span>
+        <h1 class="brand-font mt-4 text-3xl font-extrabold tracking-[-.04em] sm:text-5xl lg:text-6xl">
+          Siap Melayanan Kebutuhan<br><span class="text-[#9be3f7]">Air Mineral Anda</span>
+        </h1>
+        <p class="mt-4 mx-auto max-w-2xl text-xs sm:text-base leading-relaxed text-white/80">
+          Hubungi tim admin kami untuk informasi produk, pemesanan instan, pencarian agen distributor, atau kunjungan ke lokasi operasional kami.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. SECTION GET IN TOUCH & 2 SLOT ADMIN WHATSAPP -->
+    <section class="bg-[#f5faf8] py-12 sm:py-16 lg:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
+        
+        <div class="grid gap-8 items-center rounded-3xl sm:rounded-[2.5rem] bg-white p-6 sm:p-10 lg:p-12 shadow-xl border border-[#e3ece8] lg:grid-cols-2">
+          
+          <!-- SISI KIRI: DESKRIPSI & INFO PERUSAHAAN -->
+          <div class="space-y-5 sm:space-y-6">
+            <div>
+              <span class="eyebrow">GET IN TOUCH</span>
+              <h2 class="section-title mt-2.5 text-[#04341f]">Ada Pertanyaan atau Kebutuhan Pemesanan?</h2>
+              <p class="mt-3 text-xs sm:text-sm leading-relaxed text-[#66766f]">
+                Punya pertanyaan seputar pemesanan produk, informasi distributor, atau penawaran kemitraan? Hubungi tim admin kami secara langsung melalui WhatsApp untuk respon cepat.
+              </p>
+            </div>
+
+            <div class="space-y-3.5 pt-1 border-t border-[#e3ece8]">
+              <div class="flex items-center gap-3.5 sm:gap-4">
+                <div class="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-2xl bg-[#e4f7fb] text-[#169bd5]">
+                  <i data-lucide="building-2" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] sm:text-xs font-bold text-[#66766f]">Perusahaan</p>
+                  <p class="text-xs sm:text-sm font-bold text-[#04341f]">PT Agrimitra Utama Persada</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3.5 sm:gap-4">
+                <div class="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-2xl bg-[#e8f5ed] text-[#0b7547]">
+                  <i data-lucide="clock" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] sm:text-xs font-bold text-[#66766f]">Jam Operasional</p>
+                  <p class="text-xs sm:text-sm font-bold text-[#04341f]">Senin - Sabtu (08:00 - 17:00 WIB)</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3.5 sm:gap-4">
+                <div class="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-2xl bg-[#fff0ef] text-[#d9231d]">
+                  <i data-lucide="mail" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] sm:text-xs font-bold text-[#66766f]">Email Resmi</p>
+                  <a href="mailto:amdk.sms_padang@yahoo.com" class="text-xs sm:text-sm font-bold text-[#04341f] hover:underline">amdk.sms_padang@yahoo.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SISI KANAN: 2 SLOT WHATSAPP ADMIN -->
+          <div class="space-y-4">
+            
+            <!-- SLOT ADMIN 1 -->
+            <div class="soft-card lift rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#eaf8fb] via-white to-[#e8f5ed] p-5 sm:p-6 border border-[#e3ece8]">
+              <div class="flex items-center gap-3.5 mb-2.5">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#25D366]/20 shadow-inner">
+                  <i data-lucide="message-circle" class="h-5 w-5 text-[#25D366]"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-extrabold text-[#04341f]">Layanan Pelanggan 1</h3>
+                  <p class="text-xs text-[#66766f]">Pemesanan melalui admin 1.</p>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <a href="https://wa.me/6285363287675?text=Halo%20SMS%20Air%20Mineral,%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer" class="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3 px-4 text-xs sm:text-sm font-extrabold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#20ba5a] active:scale-95">
+                  <i data-lucide="message-circle" class="h-4 w-4"></i>
+                  <span>Chat Admin</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- SLOT ADMIN 2 -->
+            <div class="soft-card lift rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#eaf8fb] via-white to-[#e8f5ed] p-5 sm:p-6 border border-[#e3ece8]">
+              <div class="flex items-center gap-3.5 mb-2.5">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#25D366]/20 shadow-inner">
+                  <i data-lucide="message-circle" class="h-5 w-5 text-[#25D366]"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-extrabold text-[#04341f]">Layanan Pelanggan 2</h3>
+                  <p class="text-xs text-[#66766f]">Pemesanan melalui admin 2.</p>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <a href="https://wa.me/6285100020589?text=Halo%20SMS%20Air%20Mineral,%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer" class="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3 px-4 text-xs sm:text-sm font-extrabold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#20ba5a] active:scale-95">
+                  <i data-lucide="message-circle" class="h-4 w-4"></i>
+                  <span>Chat Admin</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SECTION LOCATION & PETA INTERAKTIF -->
+    <section class="bg-white py-12 sm:py-16 lg:py-20 border-t border-[#e3ece8]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="eyebrow">LOCATION</span>
+          <h2 class="section-title mt-2 text-[#04341f]">Lokasi Operasional Perusahaan</h2>
+          <p class="mt-2 text-xs sm:text-sm text-[#66766f]">
+            Pilih lokasi di bawah untuk melihat peta interaktif Pabrik Utama dan Kantor Distributor SMS Air Mineral.
+          </p>
+
+          <!-- TAB TOMBOL LOKASI -->
+          <div class="mt-6 flex flex-wrap justify-center gap-2">
+            <button type="button" data-loc="pabrik" class="map-tab-btn active rounded-full border border-[#0b7547] px-5 py-2 text-xs font-extrabold text-[#04341f]">
+              Pabrik Utama
+            </button>
+            <button type="button" data-loc="padang" class="map-tab-btn rounded-full border border-[#0b7547]/30 px-5 py-2 text-xs font-extrabold text-[#04341f] hover:bg-[#e8f5ed]">
+              Distributor Padang
+            </button>
+            <button type="button" data-loc="bukittinggi" class="map-tab-btn rounded-full border border-[#0b7547]/30 px-5 py-2 text-xs font-extrabold text-[#04341f] hover:bg-[#e8f5ed]">
+              Cabang Bukittinggi
+            </button>
+            <button type="button" data-loc="pekanbaru" class="map-tab-btn rounded-full border border-[#0b7547]/30 px-5 py-2 text-xs font-extrabold text-[#04341f] hover:bg-[#e8f5ed]">
+              Cabang Pekanbaru
+            </button>
+          </div>
+        </div>
+
+        <!-- GRID INTERAKTIF PETA -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch overflow-hidden rounded-3xl border border-[#e3ece8] bg-[#f8fcfa] shadow-xl">
+          
+          <!-- SISI KIRI: MAPS EMBED LIVE -->
+          <div class="lg:col-span-7 min-h-[320px] sm:min-h-[420px] w-full bg-gray-200 relative">
+            <iframe id="map-iframe" 
+                    src="https://maps.google.com/maps?q=Pabrik+SMS+Air+Mineral+Tarok+Sicincin+Padang+Pariaman&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                    class="absolute inset-0 h-full w-full border-0" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" 
+                    title="Peta Lokasi SMS Air Mineral">
+            </iframe>
+          </div>
+
+          <!-- SISI KANAN: DETAIL ALAMAT & INFORMASI -->
+          <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+            <div>
+              <span id="loc-tag" class="inline-block rounded-full bg-[#e4f7fb] px-3.5 py-1 text-xs font-bold text-[#169bd5] mb-3">
+                Pabrik Utama
+              </span>
+              <h3 id="loc-title" class="brand-font text-2xl font-extrabold text-[#04341f]">
+                Pabrik Utama SMS Air Mineral
+              </h3>
+              <p id="loc-address" class="mt-3 text-xs sm:text-sm leading-relaxed text-[#66766f]">
+                Desa Tarok Sicincin, Kec. 2 x 11 Enam Lingkung, Kab. Padang Pariaman, Sumatera Barat.
+              </p>
+            </div>
+
+            <div class="space-y-3 pt-4 border-t border-[#e3ece8]">
+              <div class="flex items-center gap-3 text-xs sm:text-sm text-[#04341f]">
+                <i data-lucide="phone" class="h-4 w-4 text-[#0b7547] shrink-0"></i>
+                <span id="loc-phone">(0853) 6328-7675</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs sm:text-sm text-[#04341f]">
+                <i data-lucide="mail" class="h-4 w-4 text-[#0b7547] shrink-0"></i>
+                <span>amdk.sms_padang@yahoo.com</span>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a id="loc-maps-btn" href="https://maps.app.goo.gl/bg8isqEP59S6ib3T8" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#04341f] py-3.5 px-4 text-xs sm:text-sm font-extrabold text-white shadow-lg transition hover:bg-[#075b35]">
+                <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d]"></i>
+                <span>Buka Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SECTION MEDIA SOSIAL RESMI -->
+    <section class="bg-[#f5faf8] py-14 sm:py-18 text-center border-t border-[#e3ece8]">
+      <div class="mx-auto max-w-4xl px-4 sm:px-8">
+        <h2 class="brand-font text-2xl sm:text-3xl font-extrabold text-[#04341f]">
+          Follow our official social network
+        </h2>
+        <p class="mt-2 text-xs sm:text-sm text-[#66766f]">
+          Dapatkan pembaruan berita, promo kemasan, dan edukasi kesehatan dari SMS Air Mineral.
+        </p>
+
+        <div class="mt-8 flex items-center justify-center gap-4 sm:gap-6">
+          <a href="https://web.facebook.com/profile.php?id=100081930225270" target="_blank" rel="noopener noreferrer" aria-label="Facebook SMS" class="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#04341f] text-white shadow-lg transition hover:bg-[#0b7547] hover:scale-110">
+            <i data-lucide="facebook" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+          </a>
+          <a href="https://www.instagram.com/sms_airmineral/" target="_blank" rel="noopener noreferrer" aria-label="Instagram SMS" class="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#04341f] text-white shadow-lg transition hover:bg-[#0b7547] hover:scale-110">
+            <i data-lucide="instagram" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+          </a>
+          <a href="https://www.youtube.com/@SMS_WATER/" target="_blank" rel="noopener noreferrer" aria-label="YouTube SMS" class="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#04341f] text-white shadow-lg transition hover:bg-[#0b7547] hover:scale-110">
+            <i data-lucide="youtube" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+          </a>
+          <a href="https://wa.me/6285363287675" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SMS" class="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#25D366] text-white shadow-lg transition hover:bg-[#20ba5a] hover:scale-110">
+            <i data-lucide="message-circle" class="h-5 w-5 sm:h-6 sm:w-6"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 5. FOOTER MODEREN BERTEMA AIR -->
+  <footer class="relative overflow-hidden bg-[#04341f] text-white pt-12 sm:pt-16 pb-8">
+    
+    <!-- FOTO LATAR AIR DENGAN OVERLAY DARK GREEN -->
+    <img src="Aset foto/SMS Bottled Water Collection.png" alt="Latar Air SMS" class="absolute inset-0 h-full w-full object-cover object-center opacity-15 pointer-events-none">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#022718] via-[#04341f]/90 to-[#04341f]/95"></div>
+
+    <!-- ORNAMEN BOLA AIR (WATER ORB) PERPINDARAN -->
+    <div class="water-orb -left-20 -top-20 z-0 opacity-40"></div>
+    <div class="water-orb -right-20 -bottom-20 z-0 opacity-40"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
+      
+      <!-- GRID 3 KOLOM UTAMA -->
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-12 pb-10 sm:pb-12">
+        
+        <!-- KOLOM 1: LOGO & DESKRIPSI BRAND (5 KOLOM) -->
+        <div class="md:col-span-5 space-y-4 sm:space-y-5">
+          <a href="index.html" class="inline-block">
+            <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-10 w-auto object-contain sm:h-14">
+          </a>
+          <p class="text-xs sm:text-sm leading-relaxed text-white/80 max-w-md">
+            PT Agrimitra Utama Persada berkomitmen menghadirkan kesegaran dan kemurnian air murni dari Mata Air Pegunungan Tandikek untuk menjaga hidrasi sehat keluarga Anda.
+          </p>
+          
+          <!-- IKON MEDIA SOSIAL (FOLLOW US) -->
+          <div class="pt-1">
+            <span class="block text-xs font-extrabold uppercase tracking-wider text-[#9be3f7] mb-2.5">Ikuti Kami</span>
+            <div class="flex items-center gap-3">
+              <a href="https://web.facebook.com/profile.php?id=100081930225270" target="_blank" rel="noopener noreferrer" aria-label="Facebook SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#0b7547] hover:border-[#0b7547]">
+                <i data-lucide="facebook" class="h-4 w-4"></i>
+              </a>
+              <a href="https://www.instagram.com/sms_airmineral/" target="_blank" rel="noopener noreferrer" aria-label="Instagram SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#0b7547] hover:border-[#0b7547]">
+                <i data-lucide="instagram" class="h-4 w-4"></i>
+              </a>
+              <a href="https://www.youtube.com/@SMS_WATER/" target="_blank" rel="noopener noreferrer" aria-label="YouTube SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#0b7547] hover:border-[#0b7547]">
+                <i data-lucide="youtube" class="h-4 w-4"></i>
+              </a>
+              <a href="https://wa.me/6285363287675" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SMS" class="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-[#25D366] hover:border-[#25D366]">
+                <i data-lucide="message-circle" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- KOLOM 2: NAVIGASI CEPAT (QUICK LINKS - 3 KOLOM) -->
+        <div class="md:col-span-3 space-y-3 sm:space-y-4">
+          <h3 class="brand-font text-sm sm:text-lg font-extrabold text-[#9be3f7] uppercase tracking-wider">
+            Navigasi Cepat
+          </h3>
+          <ul class="space-y-2 sm:space-y-2.5 text-xs sm:text-sm font-semibold text-white/80">
+            <li>
+              <a href="index.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Beranda
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Tentang Kami
+              </a>
+            </li>
+            <li>
+              <a href="products.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Katalog Produk
+              </a>
+            </li>
+            <li>
+              <a href="distributors.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Cari Agen Kami
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+                <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Hubungi Kami
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- KOLOM 3: KONTAK & ALAMAT PABRIK (4 KOLOM) -->
+        <div class="md:col-span-4 space-y-3 sm:space-y-4">
+          <h3 class="brand-font text-sm sm:text-lg font-extrabold text-[#9be3f7] uppercase tracking-wider">
+            Kontak Perusahaan
+          </h3>
+          <ul class="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/80">
+            <li class="flex items-start gap-2.5 sm:gap-3">
+              <i data-lucide="map-pin" class="h-4 w-4 sm:h-5 sm:w-5 text-[#9be3f7] shrink-0 mt-0.5"></i>
+              <span>Korong Tarok, Nagari Kepalo Hilalang, Kec. 2x11 Kayu Tanam, Kab. Padang Pariaman, Sumatera Barat.</span>
+            </li>
+            <li class="flex items-center gap-2.5 sm:gap-3">
+              <i data-lucide="mail" class="h-4 w-4 text-[#9be3f7] shrink-0"></i>
+              <a href="mailto:amdk.sms_padang@yahoo.com" class="hover:text-white hover:underline">amdk.sms_padang@yahoo.com</a>
+            </li>
+            <li class="flex items-center gap-2.5 sm:gap-3">
+              <i data-lucide="phone" class="h-4 w-4 text-[#9be3f7] shrink-0"></i>
+              <span>(0853) 6328-7675 (Cab. Padang)</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- GARIS PEMBATAS & HAK CIPTA -->
+      <div class="border-t border-white/15 pt-5 sm:pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left text-xs text-white/60">
+        <p>© PT Agrimitra Utama Persada. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition">Syarat &amp; Ketentuan</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- LOGIKA SCRIPT INTEGRASI -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+
+      // 1. MENU MOBILE TOGGLE
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // 2. HEADER SCROLL EFFECT
+      const header = document.getElementById("site-header");
+      function handleScroll(){
+        if(window.scrollY > 30) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      }
+      window.addEventListener("scroll", handleScroll, {passive:true});
+      handleScroll();
+
+      // 3. LOGIKA INTERAKTIF PETA LOKASI PERUSAHAAN
+      const mapLocations = {
+        pabrik: {
+          tag: "Pabrik Utama",
+          title: "Pabrik Utama SMS Air Mineral",
+          address: "Desa Tarok Sicincin, Kec. 2 x 11 Enam Lingkung, Kab. Padang Pariaman, Sumatera Barat.",
+          phone: "(0853) 6328-7675",
+          mapsUrl: "https://maps.app.goo.gl/bg8isqEP59S6ib3T8",
+          embedUrl: "https://maps.google.com/maps?q=Pabrik+SMS+Air+Mineral+Tarok+Sicincin+Padang+Pariaman&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        },
+        padang: {
+          tag: "Kantor Distributor",
+          title: "Distributor Utama Padang",
+          address: "Jl. Kelenteng No.317, Kp. Pd., Kec. Padang Sel., Kota Padang, Sumatera Barat 25134.",
+          phone: "0853-6328-7675",
+          mapsUrl: "https://maps.app.goo.gl/KKppT9UCBrTLXezM8",
+          embedUrl: "https://maps.google.com/maps?q=Jl.+Kelenteng+No.317+Padang+Sumatera+Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        },
+        bukittinggi: {
+          tag: "Kantor Distributor",
+          title: "Cabang Bukittinggi",
+          address: "Jl. By Pass No. 10, Pulai Anak Air, Mandiangin Koto Selayan, Kota Bukittinggi, Sumatera Barat.",
+          phone: "0851-0002-0589",
+          mapsUrl: "https://maps.app.goo.gl/5wtCPTwSEaNgnxic9",
+          embedUrl: "https://maps.google.com/maps?q=Jl.+By+Pass+No.+10+Pulai+Anak+Air+Bukittinggi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        },
+        pekanbaru: {
+          tag: "Kantor Distributor",
+          title: "Cabang Pekanbaru",
+          address: "Jl. Riau Ujung No. 181 E, F, G, Tampan, Payung Sekaki, Kota Pekanbaru, Riau 28292.",
+          phone: "0853-7446-1097",
+          mapsUrl: "https://maps.app.goo.gl/LSQijzsBFcEcwANh6",
+          embedUrl: "https://maps.google.com/maps?q=Jl.+Riau+Ujung+No.+181+Pekanbaru+Riau&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        }
+      };
+
+      const tabButtons = document.querySelectorAll(".map-tab-btn");
+      const mapIframe = document.getElementById("map-iframe");
+      const locTag = document.getElementById("loc-tag");
+      const locTitle = document.getElementById("loc-title");
+      const locAddress = document.getElementById("loc-address");
+      const locPhone = document.getElementById("loc-phone");
+      const locMapsBtn = document.getElementById("loc-maps-btn");
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const locKey = btn.getAttribute("data-loc");
+          const data = mapLocations[locKey];
+
+          if (data) {
+            tabButtons.forEach(b => {
+              b.classList.remove("active", "border-[#0b7547]");
+              b.classList.add("border-[#0b7547]/30");
+            });
+            btn.classList.add("active", "border-[#0b7547]");
+            btn.classList.remove("border-[#0b7547]/30");
+
+            if (mapIframe) mapIframe.src = data.embedUrl;
+            if (locTag) locTag.textContent = data.tag;
+            if (locTitle) locTitle.textContent = data.title;
+            if (locAddress) locAddress.textContent = data.address;
+            if (locPhone) locPhone.textContent = data.phone;
+            if (locMapsBtn) locMapsBtn.href = data.mapsUrl;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
