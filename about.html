@@ -7,114 +7,115 @@
   <title>Tentang Kami | SMS Air Mineral</title>
 
   <!-- Font & Library Eksternal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
 
   <style>
-    :root{
-      --panel:#0b6e45;
-      --forest:#075b35;
-      --deep:#04341f;
-      --green:#0b7547;
-      --red:#d9231d;
-      --blue:#169bd5;
-      --ice:#eef9fb;
-      --ink:#10362a;
-      --muted:#66766f;
-      --line:#e3ece8;
+    :root {
+      --panel: #0b6e45;
+      --forest: #075b35;
+      --deep: #04341f;
+      --green: #0b7547;
+      --red: #d9231d;
+      --blue: #169bd5;
+      --ice: #eef9fb;
+      --ink: #10362a;
+      --muted: #66766f;
+      --line: #e3ece8;
     }
 
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:"Fira Sans",sans-serif;
-      color:var(--ink);
-      background:#fff;
-      overflow-x:hidden;
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Fira Sans", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      overflow-x: hidden;
     }
-    h1,h2,h3,h4,.brand-font{font-family:"Manrope","Fira Sans",sans-serif}
-    ::selection{background:#bfe9f5;color:var(--deep)}
+    h1, h2, h3, h4, .brand-font { font-family: "Manrope", "Fira Sans", sans-serif; }
+    ::selection { background: #bfe9f5; color: var(--deep); }
+    :focus-visible { outline: 3px solid #ffd43b; outline-offset: 3px; border-radius: 8px; }
 
-    /* NAVBAR SAMA PERSIS INDEX */
-    .site-header{
-      background:var(--panel);
-      backdrop-filter:none;
-      -webkit-backdrop-filter:none;
-      border-bottom:1px solid rgba(255,255,255,.1);
-      transition:all .3s ease;
+    /* NAVBAR HEADER */
+    .site-header {
+      background: var(--panel);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      transition: background-color .3s ease, box-shadow .3s ease;
     }
-    .site-header.scrolled{
-      background:var(--panel);
-      box-shadow:0 8px 28px rgba(0,0,0,.2);
+    .site-header.scrolled {
+      background: var(--panel);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
     }
-    .nav-link{position:relative}
-    .nav-link::after{
-      content:"";
-      position:absolute;
-      left:50%;
-      bottom:-6px;
-      width:0;
-      height:2px;
-      border-radius:99px;
-      background:#ffd43b;
-      transform:translateX(-50%);
-      transition:width .25s ease;
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      border-radius: 99px;
+      background: #ffd43b;
+      transform: translateX(-50%);
+      transition: width .25s ease;
     }
-    .nav-link:hover::after,.nav-link.active::after{width:100%}
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-    /* FLOATING DECOR */
-    .water-orb{
-      position:absolute;
-      width:360px;height:360px;
-      border-radius:50%;
-      background:radial-gradient(circle at 30% 30%,rgba(123,214,245,.28),rgba(22,155,213,.04) 65%,transparent 70%);
-      filter:blur(1px);
-      pointer-events:none;
-    }
-
-    /* GENERAL */
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      color:var(--green);
-      font-size:.72rem;
-      font-weight:800;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-    .eyebrow::before{
-      content:"";
-      width:28px;height:2px;
-      background:var(--red);
-      border-radius:99px;
-    }
-    .section-title{
-      font-size:clamp(1.8rem,3.5vw,3rem);
-      line-height:1.08;
-      font-weight:800;
-      letter-spacing:-.04em;
-    }
-    .soft-card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.88);
-      box-shadow:0 18px 50px rgba(4,52,31,.07);
-    }
-    .lift{
-      transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
-    }
-    .lift:hover{
-      transform:translateY(-7px);
-      box-shadow:0 24px 55px rgba(4,52,31,.12);
-      border-color:#c8ddd5;
+    /* DEKORASI ORB */
+    .water-orb {
+      position: absolute;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(123, 214, 245, .28), rgba(22, 155, 213, .04) 65%, transparent 70%);
+      filter: blur(1px);
+      pointer-events: none;
     }
 
-    /* WHATSAPP */
-    #whatsapp-float{transition:opacity .45s ease,transform .45s ease}
+    /* KARTU & DEKORASI GENERAL */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px; height: 2px;
+      background: var(--red);
+      border-radius: 99px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+    .soft-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .88);
+      box-shadow: 0 18px 50px rgba(4, 52, 31, .07);
+    }
+    .lift {
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+    .lift:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 55px rgba(4, 52, 31, .12);
+      border-color: #c8ddd5;
+    }
 
-    @media(max-width:767px){
-      .water-orb{width:230px;height:230px}
+    /* WHATSAPP FLOAT */
+    #whatsapp-float { transition: opacity .45s ease, transform .45s ease; }
+
+    @media (max-width: 767px) {
+      .water-orb { width: 230px; height: 230px; }
     }
   </style>
 </head>
@@ -153,8 +154,8 @@
 
     <!-- PAGE BANNER HERO -->
     <section class="relative overflow-hidden bg-[#04341f] py-16 lg:py-24 text-white shadow-2xl">
-      <img src="Aset foto/pabrik dari atas.png" alt="Latar Belakang SMS Air Mineral" class="absolute inset-0 h-full w-full object-cover object-center">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#04341f]/90 via-[#04341f]/40 to-[#04341f]/95 backdrop-blur-[1px]"></div>
+      <img src="Aset foto/pabrik dari atas.png" alt="Latar Belakang SMS Air Mineral" class="absolute inset-0 h-full w-full object-cover object-center opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#04341f]/90 via-[#04341f]/70 to-[#04341f]"></div>
 
       <div class="water-orb -right-20 -top-20 z-10"></div>
       <div class="water-orb -left-20 -bottom-20 z-10"></div>
@@ -175,7 +176,7 @@
 
     <!-- 1. SEJARAH & PERJALANAN PERUSAHAAN -->
     <section class="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8 space-y-8">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
         <div class="soft-card rounded-[2rem] bg-gradient-to-br from-[#f5faf8] via-white to-[#eef9fb] p-8 sm:p-12 border border-[#e3ece8] shadow-lg">
           <span class="eyebrow">Sejarah &amp; Profil Perusahaan</span>
           <h2 class="section-title mt-3 text-[#04341f]">
@@ -209,8 +210,10 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-    <!-- VISI & MISI PERUSAHAAN -->
+    <!-- 2. VISI & MISI PERUSAHAAN -->
     <section class="relative overflow-hidden bg-[#04341f] py-16 sm:py-20 lg:py-24 text-white">
       <div class="water-orb -right-24 -top-24 z-0 opacity-80"></div>
       <div class="water-orb -left-24 -bottom-24 z-0 opacity-80"></div>
@@ -226,40 +229,47 @@
         </div>
 
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10 items-stretch">
+          <!-- Visi -->
           <div class="rounded-3xl border border-white/15 bg-white/10 p-8 sm:p-10 lg:p-12 backdrop-blur-md flex flex-col justify-between shadow-2xl">
             <div>
               <span class="brand-font block text-xs font-extrabold uppercase tracking-widest text-[#9be3f7] mb-4">
                 Visi Utama
               </span>
               <h3 class="brand-font text-2xl font-extrabold leading-snug text-white sm:text-3xl lg:text-4xl">
-                Menjadi Salah Satu Perusahaan Air Minum dalam Kemasan (AMDK) Terbaik di Indonesia
+                Menjadi sahabat keluarga Indonesia dalam memenuhi kebutuhan air minum yang Sehat, Halal, dan Berkah.
               </h3>
-              <p class="mt-6 text-sm sm:text-base leading-relaxed text-white/85">
-                Menjadi produsen terpercaya yang dikenal atas mutu produk, kemurnian sumber air pegunungan alami, serta komitmen tulus dalam menyediakan hidrasi sehat bagi seluruh masyarakat Indonesia.
-              </p>
             </div>
           </div>
 
+          <!-- Misi -->
           <div class="rounded-3xl border border-white/15 bg-white/10 p-8 sm:p-10 lg:p-12 backdrop-blur-md flex flex-col justify-between shadow-2xl">
             <div>
               <span class="brand-font block text-xs font-extrabold uppercase tracking-widest text-[#9be3f7] mb-4">
                 Misi Perusahaan
               </span>
-              <div class="space-y-6 pt-1">
-                <div>
-                  <h4 class="text-xl sm:text-2xl font-extrabold text-white">
-                    Produk Kompetitif &amp; Berkualitas
-                  </h4>
-                  <p class="mt-2 text-xs sm:text-sm leading-relaxed text-white/80">
-                    Menciptakan produk air minum dalam kemasan yang kompetitif, aman, dan berkualitas tinggi bagi seluruh konsumen.
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-1">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <h4 class="text-lg font-extrabold text-[#9be3f7]">1. BERKAH</h4>
+                  <p class="mt-1 text-xs sm:text-sm leading-relaxed text-white/80">
+                    Menjalankan bisnis dengan prinsip Jujur, Amanah, dan Saling Menguntungkan.
                   </p>
                 </div>
-                <div>
-                  <h4 class="text-xl sm:text-2xl font-extrabold text-white">
-                    Market Leader AMDK
-                  </h4>
-                  <p class="mt-2 text-xs sm:text-sm leading-relaxed text-white/80">
-                    Menjadi Market Leader di bidang penjualan Air Mineral AMDK khususnya di wilayah Indonesia.
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <h4 class="text-lg font-extrabold text-[#9be3f7]">2. SEHAT</h4>
+                  <p class="mt-1 text-xs sm:text-sm leading-relaxed text-white/80">
+                    Menjamin Air Mineral SMS Aman, Bersih, dan layak untuk Keluarga.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <h4 class="text-lg font-extrabold text-[#9be3f7]">3. CEPAT</h4>
+                  <p class="mt-1 text-xs sm:text-sm leading-relaxed text-white/80">
+                    Memastikan dropping dan jemput galon berjalan tepat waktu setiap hari.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <h4 class="text-lg font-extrabold text-[#9be3f7]">4. PEDULI</h4>
+                  <p class="mt-1 text-xs sm:text-sm leading-relaxed text-white/80">
+                    Membina mitra dan karyawan agar sejahtera bersama.
                   </p>
                 </div>
               </div>
@@ -276,7 +286,7 @@
           <span class="eyebrow">Keunggulan Sumber Alam</span>
           <h2 class="section-title mt-3 text-[#04341f]">Sumber Mata Air Mineral SMS</h2>
           <p class="mt-3 text-sm text-[#66766f]">
-            Terletak di Desa Andalas, bersumber langsung dari Pegunungan Tandikek di kaki Gunung Singgalang, Kabupaten Padang Pariaman.
+            Terletak di Desa Andalas, bersumber langsung dari Pegunungan di Kabupaten Padang Pariaman.
           </p>
         </div>
 
@@ -327,11 +337,19 @@
     <section class="relative overflow-hidden bg-[#04341f] py-16 sm:py-20 text-white">
       <div class="water-orb -right-28 top-20"></div>
       <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+        
+       <!-- SLOT LOGO PROSODUSEN KEMASAN (PROPORSIONAL & RAPI) -->
+        <div class="mb-8 flex justify-center px-4">
+          <div class="flex h-16 w-48 items-center justify-center rounded-2xl bg-white p-3.5 shadow-xl transition-transform duration-300 hover:scale-105 sm:h-20 sm:w-64">
+            <img src="Aset foto/Picture2.png" alt="Logo M Plast" class="h-full w-full object-contain">
+          </div>
+        </div>
+
         <div class="text-center max-w-3xl mx-auto mb-12">
           <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold text-[#9be3f7]">
             <i data-lucide="shield-check" class="h-4 w-4"></i> Standar Keamanan Pangan (Food Grade)
           </span>
-          <h2 class="brand-font mt-4 text-3xl font-extrabold sm:text-4xl">Jenis Biji Plastik & Peruntukan Kemasan</h2>
+          <h2 class="brand-font mt-4 text-3xl font-extrabold sm:text-4xl">Jenis Biji Plastik &amp; Peruntukan Kemasan</h2>
           <p class="mt-3 text-xs sm:text-sm text-white/80">
             Setiap varian kemasan SMS Air Mineral diproduksi menggunakan material biji plastik murni bersertifikat Food Grade dan BPA Free sesuai peruntukannya.
           </p>
@@ -352,8 +370,8 @@
               <div class="mt-5 pt-4 border-t border-white/10">
                 <p class="text-xs font-bold text-[#9be3f7]">Diperuntukkan Untuk:</p>
                 <ul class="mt-2 space-y-1.5 text-xs text-white/90">
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Botol 330 ml, 600 ml, & 1500 ml</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Galon PET Sekali Pakai (5L & 15L)</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Botol 330 ml, 600 ml, &amp; 1500 ml</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Galon PET Sekali Pakai (5L &amp; 15L)</li>
                 </ul>
               </div>
             </div>
@@ -367,7 +385,7 @@
               <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-xs font-bold text-[#9be3f7]">PC (Polycarbonate)</span>
               <h3 class="mt-3 text-lg font-bold text-white">Plastik PC Standar Tinggi</h3>
               <p class="mt-2 text-xs text-white/70 leading-relaxed">
-                Material sangat kuat, tahan benturan keras, serta tahan terhadap proses pencucian & sterilisasi suhu tinggi.
+                Material sangat kuat, tahan benturan keras, serta tahan terhadap proses pencucian &amp; sterilisasi suhu tinggi.
               </p>
               
               <div class="mt-5 pt-4 border-t border-white/10">
@@ -386,7 +404,7 @@
                 <img src="Aset foto/Gemini_Generated_Image_xp414cxp414cxp41.jpg" alt="Biji Plastik PP" class="h-full w-full object-cover">
               </div>
               <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-xs font-bold text-[#9be3f7]">PP (Polypropylene)</span>
-              <h3 class="mt-3 text-lg font-bold text-white">Plastik PP Elastis & Liat</h3>
+              <h3 class="mt-3 text-lg font-bold text-white">Plastik PP Elastis &amp; Liat</h3>
               <p class="mt-2 text-xs text-white/70 leading-relaxed">
                 Karakteristik elastis, fleksibel, serta tahan terhadap tekanan sealing panas pada mesin pengemasan cup.
               </p>
@@ -395,7 +413,7 @@
                 <p class="text-xs font-bold text-[#9be3f7]">Diperuntukkan Untuk:</p>
                 <ul class="mt-2 space-y-1.5 text-xs text-white/90">
                   <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Kemasan Gelas Cup 220 ml</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Tutup Botol & Tutup Galon</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366]"></i> Tutup Botol &amp; Tutup Galon</li>
                 </ul>
               </div>
             </div>
@@ -407,18 +425,19 @@
     <!-- SECTION STRUKTUR ORGANISASI PERUSAHAAN -->
     <section class="bg-white py-16 sm:py-20">
       <div class="mx-auto max-w-6xl px-5 sm:px-8 text-center">
-        <span class="eyebrow justify-center">Manajemen & Kepemimpinan</span>
+        <span class="eyebrow justify-center">Manajemen &amp; Kepemimpinan</span>
         <h2 class="brand-font mt-3 text-3xl font-extrabold text-[#04341f] sm:text-4xl lg:text-5xl">
           Struktur Organisasi Perusahaan
         </h2>
 
         <div class="mt-14 flex flex-col items-center w-full max-w-4xl mx-auto">
+          <!-- Direktur Utama -->
           <div class="flex flex-col items-center text-center">
             <div class="relative h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-xl">
-              <img src="Aset foto/pak manerep.jpeg" alt="Foto Direktur Utama" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/150'">
+              <img src="Aset foto/pak manerep.jpeg" alt="Foto Direktur Utama" class="h-full w-full object-cover">
             </div>
             <h3 class="brand-font mt-4 text-2xl font-extrabold text-[#04341f] sm:text-3xl">
-              Ir . Manerep Mangatur Nababan
+              Ir. Manerep Mangatur Nababan
             </h3>
             <p class="mt-1 text-base font-bold text-[#0b7547] sm:text-lg">
               Direktur Utama
@@ -430,6 +449,7 @@
 
           <div class="h-10 w-0.5 bg-[#0b7547]"></div>
 
+          <!-- General Manager -->
           <div class="flex flex-col items-center text-center">
             <div class="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-lg">
               <img src="Aset foto/david alwie.jpeg" alt="David Alwie" class="h-full w-full object-cover">
@@ -447,16 +467,15 @@
 
           <div class="h-8 w-0.5 bg-[#0b7547]"></div>
 
+          <!-- Cabang 3 Manager -->
           <div class="w-full relative">
             <div class="hidden sm:block absolute top-0 left-[16.666%] right-[16.666%] h-0.5 bg-[#0b7547]"></div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 w-full">
               <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
                 <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
-                <div class="block sm:hidden h-6 w-0.5 bg-[#0b7547] -mt-6 mb-2"></div>
-
-                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-3 border-[#0b7547] shadow-md">
-                  <img src="Aset foto/syahrianto.jpeg" alt="Area Sales Manager" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/120'">
+                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-md">
+                  <img src="Aset foto/syahrianto.jpeg" alt="Area Sales Manager" class="h-full w-full object-cover">
                 </div>
                 <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
                   Syahrianto
@@ -465,16 +484,14 @@
                   Area Sales Manager
                 </p>
                 <p class="text-[11px] font-semibold text-[#66766f]">
-                  Pemasaran & Distribusi Agen
+                  Pemasaran &amp; Distribusi Agen
                 </p>
               </div>
 
               <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
                 <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
-                <div class="block sm:hidden h-6 w-0.5 bg-[#0b7547] -mt-6 mb-2"></div>
-
-                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-3 border-[#0b7547] shadow-md">
-                  <img src="Aset foto/buk novrika.jpeg" alt="Manager HRD" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/120'">
+                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-md">
+                  <img src="Aset foto/buk novrika.jpeg" alt="Manager HRD" class="h-full w-full object-cover">
                 </div>
                 <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
                   Novrika Sari, S.Psi., MM
@@ -483,25 +500,23 @@
                   Manager HRD
                 </p>
                 <p class="text-[11px] font-semibold text-[#66766f]">
-                  Pengembangan SDM & Legalitas
+                  Pengembangan SDM &amp; Legalitas
                 </p>
               </div>
 
               <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
                 <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
-                <div class="block sm:hidden h-6 w-0.5 bg-[#0b7547] -mt-6 mb-2"></div>
-
-                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-3 border-[#0b7547] shadow-md">
-                  <img src="Aset foto/WhatsApp Image 2026-10-12 at 14.45.56.jpeg" alt="Muhammad Trianto Desdio" class="h-full w-full object-cover" onerror="this.src='https://via.placeholder.com/120'">
+                <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-md">
+                  <img src="Aset foto/WhatsApp Image 2026-10-12 at 14.45.56.jpeg" alt="Internal Auditor" class="h-full w-full object-cover">
                 </div>
-                <h4 class="brand-font mt-4 text-base font-extrabold text-[#04341f]">
+                <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
                   Muhammad Trianto Desdio
                 </h4>
                 <p class="text-xs font-bold text-[#0b7547]">
                   Internal Auditor
                 </p>
                 <p class="text-[11px] font-semibold text-[#66766f]">
-                  Audit Keuangan & SOP
+                  Audit Keuangan &amp; SOP
                 </p>
               </div>
             </div>
@@ -516,9 +531,6 @@
   <footer class="relative overflow-hidden bg-[#04341f] text-white pt-12 sm:pt-16 pb-8">
     <img src="Aset foto/SMS Bottled Water Collection.png" alt="Latar Air SMS" class="absolute inset-0 h-full w-full object-cover object-center opacity-15 pointer-events-none">
     <div class="absolute inset-0 bg-gradient-to-t from-[#022718] via-[#04341f]/90 to-[#04341f]/95"></div>
-
-    <div class="water-orb -left-20 -top-20 z-0 opacity-40"></div>
-    <div class="water-orb -right-20 -bottom-20 z-0 opacity-40"></div>
 
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-12 pb-10 sm:pb-12">
@@ -616,7 +628,7 @@
   <!-- WHATSAPP FLOAT -->
   <a id="whatsapp-float"
      href="https://wa.me/6285363287675?text=Halo%20SMS%20Air%20Mineral,%20saya%20ingin%20pesan"
-     target="_blank" rel="noopener noreferrer"
+     target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SMS Air Mineral"
      class="fixed bottom-5 right-5 z-50 flex translate-y-6 items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 font-extrabold text-white opacity-0 shadow-2xl pointer-events-none transition hover:bg-[#20ba5a] sm:bottom-7 sm:right-7">
     <i data-lucide="message-circle" class="h-5 w-5"></i>
     <span class="text-xs sm:text-sm">Pesan Sekarang</span>
@@ -625,7 +637,9 @@
   <!-- LOGIKA SCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      lucide.createIcons();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
 
       // MENU MOBILE
       const menuToggle = document.getElementById("menu-toggle");
@@ -636,23 +650,23 @@
         });
       }
 
-      // HEADER SAAT SCROLL
+      // HEADER & WHATSAPP SAAT SCROLL
       const header = document.getElementById("site-header");
       const waFloat = document.getElementById("whatsapp-float");
 
-      function handleScroll(){
-        if(window.scrollY > 30) header.classList.add("scrolled");
-        else header.classList.remove("scrolled");
+      function handleScroll() {
+        if (window.scrollY > 30 && header) header.classList.add("scrolled");
+        else if (header) header.classList.remove("scrolled");
 
-        if(window.scrollY > 220){
-          waFloat.classList.remove("opacity-0","pointer-events-none","translate-y-6");
-          waFloat.classList.add("opacity-100","translate-y-0");
-        } else {
-          waFloat.classList.remove("opacity-100","translate-y-0");
-          waFloat.classList.add("opacity-0","pointer-events-none","translate-y-6");
+        if (window.scrollY > 220 && waFloat) {
+          waFloat.classList.remove("opacity-0", "pointer-events-none", "translate-y-6");
+          waFloat.classList.add("opacity-100", "translate-y-0");
+        } else if (waFloat) {
+          waFloat.classList.remove("opacity-100", "translate-y-0");
+          waFloat.classList.add("opacity-0", "pointer-events-none", "translate-y-6");
         }
       }
-      window.addEventListener("scroll", handleScroll, {passive:true});
+      window.addEventListener("scroll", handleScroll, { passive: true });
       handleScroll();
     });
   </script>
