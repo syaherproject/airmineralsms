@@ -6,9 +6,8 @@
   <meta name="description" content="Cari agen, depot, dan toko terdekat SMS Air Mineral di wilayah Sumatera Barat, Riau, Jambi, dan Bengkulu.">
   <title>Cari Agen & Distributor | SMS Air Mineral</title>
 
-    <!-- Kode untuk menampilkan logo di tab browser -->
+  <!-- Logo di tab browser -->
   <link rel="icon" type="image/png" href="Aset foto/LOGO.png">
-</head>
 
   <!-- Font & Library Eksternal -->
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -40,7 +39,7 @@
     h1,h2,h3,h4,.brand-font{font-family:"Manrope","Fira Sans",sans-serif}
     ::selection{background:#bfe9f5;color:var(--deep)}
 
-    /* NAVBAR SAMA PERSIS INDEX */
+    /* NAVBAR */
     .site-header{
       background:var(--panel);
       backdrop-filter:none;
@@ -128,7 +127,7 @@
   <!-- HEADER -->
   <header id="site-header" class="site-header sticky top-0 z-50 w-full">
     <nav class="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-3 sm:px-8">
-      <a href="index.html" class="shrink-0">
+      <a href="index" class="shrink-0">
         <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-10 w-auto object-contain sm:h-12">
       </a>
       <div class="hidden items-center gap-7 md:flex lg:gap-10">
@@ -144,11 +143,11 @@
     </nav>
     <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#0b6e45] px-4 pb-5 pt-2 md:hidden">
       <div class="flex flex-col gap-1 text-sm font-extrabold uppercase tracking-wide text-white">
-        <a href="index.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Beranda</a>
-        <a href="about.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Tentang Kami</a>
-        <a href="products.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Produk</a>
-        <a href="distributors.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Cari Agen Kami</a>
-        <a href="contact.html" class="rounded-xl px-4 py-3 hover:bg-white/10">Hubungi Kami</a>
+        <a href="index" class="rounded-xl px-4 py-3 hover:bg-white/10">Beranda</a>
+        <a href="about" class="rounded-xl px-4 py-3 hover:bg-white/10">Tentang Kami</a>
+        <a href="products" class="rounded-xl px-4 py-3 hover:bg-white/10">Produk</a>
+        <a href="distributors" class="rounded-xl px-4 py-3 hover:bg-white/10">Cari Agen Kami</a>
+        <a href="contact" class="rounded-xl px-4 py-3 hover:bg-white/10">Hubungi Kami</a>
       </div>
     </div>
   </header>
@@ -199,7 +198,7 @@
 
           <!-- AGEN 1 -->
           <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="padang sumatera barat" data-search="toko wira tanah datar sumatera barat">
-            <img src="Aset foto/toko wira.png" alt="Toko Yos" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <img src="Aset foto/toko wira.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko Wira" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Lintau Buo (Sumatera Barat)</span>
@@ -210,11 +209,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/S1GxuNFdaJydV1JbA" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/S1GxuNFdaJydV1JbA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6281363419782?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6281363419782" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -224,7 +223,7 @@
 
           <!-- AGEN 2 -->
           <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="bukittinggi sumatera barat" data-search="toko cantik manis aur kuning bukittinggi sumatera barat">
-            <img src="Aset foto/toko cantik manis.png" alt="Toko Cantik Manis" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <img src="Aset foto/toko cantik manis.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko Cantik Manis" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Bukittinggi (Sumatera Barat)</span>
@@ -235,11 +234,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/KYudhsk5NZxsUTBs6" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/KYudhsk5NZxsUTBs6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6281266266189?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6281266266189" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -248,8 +247,8 @@
           </article>
 
           <!-- AGEN 3 -->
-          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="batusangkar sumatera barat" data-search="hana mart">
-            <img src="Aset foto/toko hana.png" alt="Hana Mart" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="batusangkar sumatera barat" data-search="hana mart batusangkar limo kaum tanah datar sumatera barat">
+            <img src="Aset foto/toko hana.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Hana Mart" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Batusangkar (Sumatera Barat)</span>
@@ -260,11 +259,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/y1iA59hL8xcQY4Px8" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/y1iA59hL8xcQY4Px8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6281363603050?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6281363603050" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -274,10 +273,10 @@
 
           <!-- AGEN 4 -->
           <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="bukittinggi sumatera barat" data-search="toko mk grosir eceran gadut tilatang kamang agam bukittinggi sumatera barat">
-            <img src="Aset foto/toko mk.png" alt="Toko MK" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <img src="Aset foto/toko mk.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko MK" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
-                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Agam (Sumatera Barat)</span>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Tilatang Kamang (Sumatera Barat)</span>
                 <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko MK (Grosir & Eceran)</h3>
                 <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
                   <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
@@ -285,11 +284,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/QYaRntx4EjcVG32c6" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/QYaRntx4EjcVG32c6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6281363154331?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6281363154331" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -299,7 +298,7 @@
 
           <!-- AGEN 5 -->
           <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="pangkalan kerinci riau" data-search="toko mega jaya pangkalan kerinci riau">
-            <img src="Aset foto/toko mega jaya palalawan.png" alt="Toko Mega Jaya" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <img src="Aset foto/toko mega jaya palalawan.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko Mega Jaya" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Pangkalan Kerinci (Riau)</span>
@@ -310,11 +309,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/6JcEH9HsnPbsZZ8f9" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/6JcEH9HsnPbsZZ8f9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6282268628886?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6282268628886" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -324,7 +323,7 @@
 
           <!-- AGEN 6 -->
           <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="rengat indragiri hulu riau" data-search="wijaya mart 88 rengat indragiri hulu riau">
-            <img src="Aset foto/toko wijaya rengat.png" alt="Wijaya Mart 88" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <img src="Aset foto/toko wijaya rengat.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Wijaya Mart 88" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Rengat (Riau)</span>
@@ -335,11 +334,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/sDTRL74JvWMTJKET7" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/sDTRL74JvWMTJKET7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6282174484488?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6282174484488" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -348,8 +347,8 @@
           </article>
 
           <!-- AGEN 7 -->
-          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="pekanbaru riau" data-search="PT. Anugerah Niaga Jaya Rumbai Pekanbaru Riau">
-            <img src="Aset foto/pt anugrah.png" alt="Wijaya Mart 88" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="pekanbaru riau" data-search="pt anugerah niaga jaya rumbai pekanbaru riau">
+            <img src="Aset foto/pt anugrah.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="PT. Anugerah Niaga Jaya" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Pekanbaru (Riau)</span>
@@ -360,11 +359,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://share.google/ws5NAYoIxo0yb2HUi" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://share.google/ws5NAYoIxo0yb2HUi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6281371270088?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6281371270088" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -373,8 +372,8 @@
           </article>
 
           <!-- AGEN 8 -->
-          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="Perawang riau" data-search="Toko King Eko Perawang Siak Riau">
-            <img src="Aset foto/.png" alt="Toko King Eko" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="perawang riau" data-search="toko king eko perawang siak riau">
+            <img src="Aset foto/.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko King Eko Perawang" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
                 <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Perawang (Riau)</span>
@@ -385,11 +384,11 @@
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/qHzipbuBG8LJjBby8" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/qHzipbuBG8LJjBby8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6285333332158?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6285333332158" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -398,23 +397,398 @@
           </article>
 
           <!-- AGEN 9 -->
-          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="Perawang riau" data-search="Toko King Eko Perawang Siak Riau">
-            <img src="Aset foto/.png" alt="Toko King Eko" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kuantan singingi riau" data-search="toko ahmad ervin kuantan singingi riau">
+            <img src="Aset foto/.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko Ahmad Ervin" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
             <div class="flex flex-col justify-between p-6 w-full">
               <div>
-                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Perawang (Riau)</span>
-                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko King Eko Perawang</h3>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kuantan Singingi (Riau)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko Ahmad Ervin</h3>
                 <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
                   <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
-                  <span>Sukamaju, Kabupaten Kuantan Singingi, Riau</span>
+                  <span>Desa Sukamaju, Kabupaten Kuantan Singingi, Riau</span>
                 </p>
               </div>
               <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
-                <a href="https://maps.app.goo.gl/qqQuqarGPqgcG5Q56" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                <a href="https://maps.app.goo.gl/oHaPh1uwU1dDfCiy5" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
                   <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
                   <span>Petunjuk Arah</span>
                 </a>
-                <a href="https://wa.me/6285333332158?" target="_blank" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                <a href="https://wa.me/6281275573955" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 10 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota dumai riau" data-search="toko adijaya dumai riau">
+            <img src="Aset foto/nama-foto-10.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko Adijaya" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Dumai, Riau</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko Adijaya</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Ratu Sima, Kota Dumai, Riau</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="https://maps.google.com/maps?q=1.6708452%2C101.4148599&z=17&hl=id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/6281378610337" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 11 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="duri bengkalis" data-search="minimarket marigold plus duri bengkalis riau>
+            <img src="Aset foto/.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="minimarket marigold plus" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Duri, Riau</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Minimarket MariGold Plus</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Pematang Pudu, Kec. Mandau, Duri, Kabupaten Bengkalis, Riau</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="https://maps.app.goo.gl/FduNaVLNEWaawGfNA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/6285265348088" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 12 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="Dhamasraya Sumatera Barat" data-search="toko sumber rezeki dhamasraya sumatera barat
+            <img src="Aset foto/.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 12" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Dhamasraya, Sumatera Barat</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko Sumber Rezeki</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Jl. Lintas Sumatera, Koto Padang, Kec. Sitiung, Kabupaten Dharmasraya, Sumatera Barat 27681</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="https://maps.app.goo.gl/inZ9bAKRG8HNfmDB9?g_st=aw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/6281374591022" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 13 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="Siak, Riau" data-search="toko kalie jaya siak riau">
+            <img src="Aset foto/nama-foto-13.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 13" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Siak, Riau</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko Kalie Jaya</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Merempan Hilir, Kabupaten Siak, Riau</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="https://maps.app.goo.gl/iWXqex6GbVgBjeGi9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/6285355265949" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 14 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="Palalawan, Riau" data-search="toko megajaya palalawan riau">
+            <img src="Aset foto/.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Toko Megajaya" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Pangkalan Kerinci (Riau)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Toko Megajaya</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Pangkalan Kerinci Kota, Kabupaten Pelalawan, Riau</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="https://maps.app.goo.gl/zZFsqtcVUhZttNoc7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/6282268628886" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 15 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="Air Molek Riau" data-search="mini market berkah air molek riau">
+            <img src="Aset foto/nama-foto-15.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="minimarket berkah" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Air Molek, Riau</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Minimarket Berkah</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>J7WV+9PM, Kembang Harum, Kec. Pasir Penyu, Kabupaten Indragiri Hulu, Riau 29353</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="https://maps.app.goo.gl/rJazmNo14q6T7VMV8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/6281371183600" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 16 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 16 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-16.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 16" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 16</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 16 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 17 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 17 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-17.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 17" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 17</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 17 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 18 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 18 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-18.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 18" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 18</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 18 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 19 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 19 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-19.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 19" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 19</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 19 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 20 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 20 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-20.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 20" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 20</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 20 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 21 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 21 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-21.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 21" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 21</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 21 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 22 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 22 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-22.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 22" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 22</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 22 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 23 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 23 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-23.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 23" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 23</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 23 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
+                  <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
+                  <span>Hubungi WA</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGEN 24 -->
+          <article class="agent-card soft-card lift flex flex-col sm:flex-row overflow-hidden rounded-3xl bg-white" data-city="kota provinsi" data-search="nama agen 24 kecamatan kota provinsi">
+            <img src="Aset foto/nama-foto-24.png" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Nama Agen 24" class="h-48 sm:h-auto sm:w-48 object-cover shrink-0">
+            <div class="flex flex-col justify-between p-6 w-full">
+              <div>
+                <span class="inline-block rounded-full bg-[#e4f7fb] px-3 py-1 text-[10px] font-bold text-[#169bd5]">Kota / Wilayah (Provinsi)</span>
+                <h3 class="mt-2 text-lg font-bold text-[#04341f]">Nama Agen / Toko 24</h3>
+                <p class="mt-2 text-xs text-[#66766f] leading-relaxed flex items-start gap-1.5">
+                  <i data-lucide="map-pin" class="h-4 w-4 text-[#d9231d] shrink-0 mt-0.5"></i>
+                  <span>Alamat lengkap agen 24 (Jalan, Kelurahan/Desa, Kecamatan, Kota/Kabupaten, Provinsi)</span>
+                </p>
+              </div>
+              <div class="mt-5 flex flex-wrap items-center gap-2 pt-4 border-t border-[#e3ece8]">
+                <a href="LINK_GOOGLE_MAPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#169bd5] px-4 py-2 text-xs font-bold text-white hover:bg-[#1282b5] transition">
+                  <i data-lucide="navigation" class="h-3.5 w-3.5"></i>
+                  <span>Petunjuk Arah</span>
+                </a>
+                <a href="https://wa.me/628XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366] px-4 py-2 text-xs font-bold text-[#0b7547] hover:bg-[#25D366] hover:text-white transition">
                   <i data-lucide="message-circle" class="h-3.5 w-3.5"></i>
                   <span>Hubungi WA</span>
                 </a>
@@ -455,7 +829,7 @@
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-12 pb-10 sm:pb-12">
         <div class="md:col-span-5 space-y-4 sm:space-y-5">
-          <a href="index.html" class="inline-block">
+          <a href="index" class="inline-block">
             <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-10 w-auto object-contain sm:h-14">
           </a>
           <p class="text-xs sm:text-sm leading-relaxed text-white/80 max-w-md">
@@ -486,27 +860,27 @@
           </h3>
           <ul class="space-y-2 sm:space-y-2.5 text-xs sm:text-sm font-semibold text-white/80">
             <li>
-              <a href="index.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+              <a href="index" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
                 <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Beranda
               </a>
             </li>
             <li>
-              <a href="about.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+              <a href="about" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
                 <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Tentang Kami
               </a>
             </li>
             <li>
-              <a href="products.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+              <a href="products" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
                 <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Katalog Produk
               </a>
             </li>
             <li>
-              <a href="distributors.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+              <a href="distributors" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
                 <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Cari Agen Kami
               </a>
             </li>
             <li>
-              <a href="contact.html" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
+              <a href="contact" class="inline-flex items-center gap-2 hover:text-white hover:translate-x-1 transition-transform">
                 <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-[#9be3f7]"></i> Hubungi Kami
               </a>
             </li>
