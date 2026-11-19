@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b6e45">
   <meta name="description" content="Profil perusahaan, sejarah, sumber mata air, standar kemasan food grade, serta struktur organisasi PT Agrimitra Utama Persada - SMS Air Mineral.">
   <meta property="og:title" content="Tentang Kami | SMS Air Mineral">
   <meta property="og:description" content="Mengenal sejarah, visi misi, sumber mata air pegunungan, standar biji plastik kemasan, dan manajemen PT Agrimitra Utama Persada.">
+  <meta property="og:image" content="Aset foto/LOGO.png">
   <meta property="og:type" content="website">
   <title>Tentang Kami | SMS Air Mineral</title>
 
   <!-- Logo di tab browser -->
   <link rel="icon" type="image/png" href="Aset foto/LOGO.png">
+
+  <!-- Data Terstruktur SEO Perusahaan -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PT Agrimitra Utama Persada",
+    "brand": {
+      "@type": "Brand",
+      "name": "SMS Air Mineral"
+    },
+    "foundingDate": "2001",
+    "email": "amdk.sms_padang@yahoo.com",
+    "telephone": "+62-853-6328-7675",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Korong Tarok, Nagari Kepalo Hilalang, Kec. 2x11 Kayu Tanam",
+      "addressRegion": "Sumatera Barat",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
 
   <!-- Font & Library Eksternal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,27 +152,33 @@
 
 <body class="min-h-screen bg-white">
 
+  <!-- AKSESIBILITAS: LEWATI KE KONTEN UTAMA -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-[#ffd43b] focus:px-4 focus:py-2 focus:text-sm focus:font-extrabold focus:text-[#04341f] focus:shadow-lg">
+    Lewati ke konten utama
+  </a>
+
   <!-- HEADER NAVIGASI -->
   <header id="site-header" class="site-header sticky top-0 z-50 w-full">
-    <nav class="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-3 sm:px-8">
+    <nav class="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-3 sm:px-8" aria-label="Navigasi Utama">
       <a href="index" class="shrink-0">
         <img src="Aset foto/LOGO.png" alt="Logo SMS Air Mineral" class="h-10 w-auto object-contain sm:h-12">
       </a>
       <div class="hidden items-center gap-7 md:flex lg:gap-10">
         <a href="index" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Beranda</a>
-        <a href="about" class="nav-link active text-[13px] font-extrabold uppercase tracking-wide text-white lg:text-sm">Tentang Kami</a>
+        <a href="about" aria-current="page" class="nav-link active text-[13px] font-extrabold uppercase tracking-wide text-white lg:text-sm">Tentang Kami</a>
         <a href="products" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Produk</a>
         <a href="distributors" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Cari Agen Kami</a>
         <a href="contact" class="nav-link text-[13px] font-extrabold uppercase tracking-wide text-white/90 hover:text-white lg:text-sm">Hubungi Kami</a>
       </div>
-      <button id="menu-toggle" type="button" class="rounded-xl p-2 text-white md:hidden" aria-label="Buka menu" aria-expanded="false">
-        <i data-lucide="menu" class="h-6 w-6"></i>
+      <button id="menu-toggle" type="button" class="rounded-xl p-2 text-white hover:bg-white/10 md:hidden" aria-label="Buka atau tutup menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span id="icon-menu"><i data-lucide="menu" class="h-6 w-6"></i></span>
+        <span id="icon-close" class="hidden"><i data-lucide="x" class="h-6 w-6"></i></span>
       </button>
     </nav>
     <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#0b6e45] px-4 pb-5 pt-2 md:hidden">
       <div class="flex flex-col gap-1 text-sm font-extrabold uppercase tracking-wide text-white">
         <a href="index" class="rounded-xl px-4 py-3 hover:bg-white/10">Beranda</a>
-        <a href="about" class="rounded-xl bg-white/15 px-4 py-3 text-[#ffd43b]">Tentang Kami</a>
+        <a href="about" aria-current="page" class="rounded-xl bg-white/15 px-4 py-3 text-[#ffd43b]">Tentang Kami</a>
         <a href="products" class="rounded-xl px-4 py-3 hover:bg-white/10">Produk</a>
         <a href="distributors" class="rounded-xl px-4 py-3 hover:bg-white/10">Cari Agen Kami</a>
         <a href="contact" class="rounded-xl px-4 py-3 hover:bg-white/10">Hubungi Kami</a>
@@ -156,11 +186,11 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- PAGE BANNER HERO -->
     <section class="relative overflow-hidden bg-[#04341f] py-16 lg:py-24 text-white shadow-2xl">
-      <img src="Aset foto/pabrik dari atas.png" alt="Latar Belakang SMS Air Mineral" class="absolute inset-0 h-full w-full object-cover object-center opacity-30">
+      <img src="Aset foto/pabrik dari atas.png" fetchpriority="high" decoding="async" alt="Pabrik PT Agrimitra Utama Persada dari atas" class="absolute inset-0 h-full w-full object-cover object-center opacity-30">
       <div class="absolute inset-0 bg-gradient-to-b from-[#04341f]/90 via-[#04341f]/70 to-[#04341f]"></div>
 
       <div class="water-orb -right-20 -top-20 z-10"></div>
@@ -297,44 +327,56 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-3">
-          <div class="soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
-            <img src="Aset foto/pabrik dari atas.png" loading="lazy" decoding="async" alt="Mata Air Pegunungan Tandikek" class="h-48 w-full object-cover">
-            <div class="p-6">
-              <span class="inline-flex items-center gap-1.5 rounded-full bg-[#e4f7fb] px-3 py-1 text-xs font-bold text-[#169bd5]">
-                <i data-lucide="mountain" class="h-3.5 w-3.5"></i> Terlindungi Alami
-              </span>
-              <h3 class="mt-3 text-lg font-bold text-[#04341f]">Mata Air Alami &amp; Penurap Steril</h3>
-              <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
-                Mata air memiliki kapasitas sangat baik dan bersih. Terlindungi oleh penutup/penurap khusus agar tidak terkontaminasi udara luar serta dijaga bersama pemerintah daerah.
-              </p>
+          <article class="group soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
+            <div>
+              <div class="h-48 w-full overflow-hidden">
+                <img src="Aset foto/pabrik dari atas.png" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Mata Air Pegunungan Tandikek" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#e4f7fb] px-3 py-1 text-xs font-bold text-[#169bd5]">
+                  <i data-lucide="mountain" class="h-3.5 w-3.5"></i> Terlindungi Alami
+                </span>
+                <h3 class="mt-3 text-lg font-bold text-[#04341f]">Mata Air Alami &amp; Penurap Steril</h3>
+                <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
+                  Mata air memiliki kapasitas sangat baik dan bersih. Terlindungi oleh penutup/penurap khusus agar tidak terkontaminasi udara luar serta dijaga bersama pemerintah daerah.
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
-            <img src="Aset foto/Stainless Steel Water Filtration Plant.png" loading="lazy" decoding="async" alt="Bak Penampungan & Pipa Milik Sendiri" class="h-48 w-full object-cover">
-            <div class="p-6">
-              <span class="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5ed] px-3 py-1 text-xs font-bold text-[#0b7547]">
-                <i data-lucide="git-commit" class="h-3.5 w-3.5"></i> Pipa Khusus Milik Sendiri
-              </span>
-              <h3 class="mt-3 text-lg font-bold text-[#04341f]">Pipa Alir Baku Langsung ke Pabrik</h3>
-              <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
-                Air dari mata air ditampung di Bak Penampung Air Baku dan dialirkan langsung ke pabrik pengolahan menggunakan jaringan pipa milik sendiri berbahan material pipa terbaik.
-              </p>
+          <article class="group soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
+            <div>
+              <div class="h-48 w-full overflow-hidden">
+                <img src="Aset foto/Stainless Steel Water Filtration Plant.png" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Bak Penampungan & Pipa Milik Sendiri" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5ed] px-3 py-1 text-xs font-bold text-[#0b7547]">
+                  <i data-lucide="git-commit" class="h-3.5 w-3.5"></i> Pipa Khusus Milik Sendiri
+                </span>
+                <h3 class="mt-3 text-lg font-bold text-[#04341f]">Pipa Alir Baku Langsung ke Pabrik</h3>
+                <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
+                  Air dari mata air ditampung di Bak Penampung Air Baku dan dialirkan langsung ke pabrik pengolahan menggunakan jaringan pipa milik sendiri berbahan material pipa terbaik.
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
-            <img src="Aset foto/labor.png" loading="lazy" decoding="async" alt="Pengujian Laboratorium Internal" class="h-48 w-full object-cover">
-            <div class="p-6">
-              <span class="inline-flex items-center gap-1.5 rounded-full bg-[#fff0ef] px-3 py-1 text-xs font-bold text-[#d9231d]">
-                <i data-lucide="flask-conical" class="h-3.5 w-3.5"></i> Uji Berkala Laboratorium
-              </span>
-              <h3 class="mt-3 text-lg font-bold text-[#04341f]">Pengujian Sampel Air Baku</h3>
-              <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
-                Sebelum proses produksi dilakukan, petugas laboratorium secara ketat menguji sampel air baku untuk memastikan kejernihan, pH, dan kesesuaian parameter standar mutu.
-              </p>
+          <article class="group soft-card lift overflow-hidden rounded-3xl bg-white flex flex-col justify-between">
+            <div>
+              <div class="h-48 w-full overflow-hidden">
+                <img src="Aset foto/labor.png" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Pengujian Laboratorium Internal" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#fff0ef] px-3 py-1 text-xs font-bold text-[#d9231d]">
+                  <i data-lucide="flask-conical" class="h-3.5 w-3.5"></i> Uji Berkala Laboratorium
+                </span>
+                <h3 class="mt-3 text-lg font-bold text-[#04341f]">Pengujian Sampel Air Baku</h3>
+                <p class="mt-2 text-xs sm:text-sm text-[#66766f] leading-relaxed">
+                  Sebelum proses produksi dilakukan, petugas laboratorium secara ketat menguji sampel air baku untuk memastikan kejernihan, pH, dan kesesuaian parameter standar mutu.
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -345,7 +387,7 @@
       <div class="water-orb -left-28 bottom-10"></div>
       <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
         
-        <!-- SLOT LOGO PRODUSEN KEMASAN (PROPORSIONAL & RAPI) -->
+        <!-- SLOT LOGO PRODUSEN KEMASAN -->
         <div class="mb-8 flex justify-center px-4">
           <div class="flex h-16 w-48 items-center justify-center rounded-2xl bg-white p-3.5 shadow-xl transition-transform duration-300 hover:scale-105 sm:h-20 sm:w-64">
             <img src="Aset foto/Picture2.png" loading="lazy" decoding="async" alt="Logo M Plast" class="h-full w-full object-contain">
@@ -364,12 +406,12 @@
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <!-- 1. PET -->
-          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition hover:border-white/30">
+          <article class="group rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition duration-300 hover:-translate-y-1.5 hover:border-white/35">
             <div>
               <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
-                <img src="Aset foto/Biji Plastik PET.jpeg" loading="lazy" decoding="async" alt="Biji Plastik PET" class="h-full w-full object-cover">
+                <img src="Aset foto/Biji Plastik PET.jpeg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Biji Plastik PET" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
               </div>
-              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[11px] font-bold text-[#9be3f7]">PET (Polyethylene Terephthalate)</span>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[10px] font-bold text-[#9be3f7]">PET (Polyethylene Terephthalate)</span>
               <h3 class="mt-3 text-lg font-bold text-white">Plastik PET Food Grade</h3>
               <p class="mt-2 text-xs text-white/75 leading-relaxed">
                 Karakteristik bening jernih, ringan, kokoh, dan kedap udara. Sangat aman dan higienis untuk menjaga kemurnian rasa air.
@@ -382,15 +424,15 @@
                 <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366] shrink-0 mt-0.5"></i><span>Galon PET Sekali Pakai (5L &amp; 15L)</span></li>
               </ul>
             </div>
-          </div>
+          </article>
 
           <!-- 2. PC -->
-          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition hover:border-white/30">
+          <article class="group rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition duration-300 hover:-translate-y-1.5 hover:border-white/35">
             <div>
               <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
-                <img src="Aset foto/Biji-Plastik-Pengertian-Jenis-Fungsi-Manfaat-Kegunaan4.jpg" loading="lazy" decoding="async" alt="Biji Plastik PC" class="h-full w-full object-cover">
+                <img src="Aset foto/Biji-Plastik-Pengertian-Jenis-Fungsi-Manfaat-Kegunaan4.jpg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Biji Plastik PC" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
               </div>
-              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[11px] font-bold text-[#9be3f7]">PC (Polycarbonate)</span>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[10px] font-bold text-[#9be3f7]">PC (Polycarbonate)</span>
               <h3 class="mt-3 text-lg font-bold text-white">Plastik PC Standar Tinggi</h3>
               <p class="mt-2 text-xs text-white/75 leading-relaxed">
                 Material sangat kuat, tahan benturan keras, serta tahan terhadap proses pencucian &amp; sterilisasi suhu tinggi.
@@ -403,15 +445,15 @@
                 <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366] shrink-0 mt-0.5"></i><span>Kemasan yang dipakai berulang</span></li>
               </ul>
             </div>
-          </div>
+          </article>
 
           <!-- 3. PP -->
-          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition hover:border-white/30">
+          <article class="group rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition duration-300 hover:-translate-y-1.5 hover:border-white/35">
             <div>
               <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
-                <img src="Aset foto/Gemini_Generated_Image_xp414cxp414cxp41.jpg" loading="lazy" decoding="async" alt="Biji Plastik PP" class="h-full w-full object-cover">
+                <img src="Aset foto/Gemini_Generated_Image_xp414cxp414cxp41.jpg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Biji Plastik PP" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
               </div>
-              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[11px] font-bold text-[#9be3f7]">PP (Polypropylene)</span>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[10px] font-bold text-[#9be3f7]">PP (Polypropylene)</span>
               <h3 class="mt-3 text-lg font-bold text-white">Plastik PP Elastis &amp; Liat</h3>
               <p class="mt-2 text-xs text-white/75 leading-relaxed">
                 Karakteristik elastis, fleksibel, serta tahan terhadap tekanan sealing panas pada mesin pengemasan cup.
@@ -423,15 +465,15 @@
                 <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366] shrink-0 mt-0.5"></i><span>Kemasan Gelas Cup 220 ml</span></li>
               </ul>
             </div>
-          </div>
+          </article>
 
           <!-- 4. HDPE -->
-          <div class="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition hover:border-white/30">
+          <article class="group rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md flex flex-col justify-between transition duration-300 hover:-translate-y-1.5 hover:border-white/35">
             <div>
               <div class="h-44 w-full overflow-hidden rounded-2xl bg-white/10 mb-5">
-                <img src="Aset foto/biji plastik hdpe.jpg" loading="lazy" decoding="async" alt="Biji Plastik HDPE" class="h-full w-full object-cover">
+                <img src="Aset foto/biji plastik hdpe.jpg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/sms.png';" alt="Biji Plastik HDPE" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
               </div>
-              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[11px] font-bold text-[#9be3f7]">HDPE (High-Density Polyethylene)</span>
+              <span class="inline-block rounded-full bg-[#9be3f7]/20 px-3 py-1 text-[10px] font-bold text-[#9be3f7]">HDPE (High-Density Polyethylene)</span>
               <h3 class="mt-3 text-lg font-bold text-white">Plastik HDPE Kepadatan Tinggi</h3>
               <p class="mt-2 text-xs text-white/75 leading-relaxed">
                 Material padat, kaku, tahan tekanan, dan kedap cairan sehingga mampu mengunci kemasan secara presisi agar air tetap higienis.
@@ -444,7 +486,7 @@
                 <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-[#25D366] shrink-0 mt-0.5"></i><span>Segel pengunci botol yang rapat &amp; aman</span></li>
               </ul>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -461,7 +503,7 @@
           <!-- Direktur Utama -->
           <div class="flex flex-col items-center text-center">
             <div class="relative h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-xl">
-              <img src="Aset foto/pak manerep.jpeg" loading="lazy" decoding="async" alt="Foto Direktur Utama" class="h-full w-full object-cover">
+              <img src="Aset foto/pak manerep.jpeg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/LOGO.png';" alt="Ir. Manerep Mangatur Nababan" class="h-full w-full object-cover object-top">
             </div>
             <h3 class="brand-font mt-4 text-2xl font-extrabold text-[#04341f] sm:text-3xl">
               Ir. Manerep Mangatur Nababan
@@ -479,7 +521,7 @@
           <!-- General Manager -->
           <div class="flex flex-col items-center text-center">
             <div class="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-lg">
-              <img src="Aset foto/david alwie.jpeg" loading="lazy" decoding="async" alt="David Alwie Rusdi" class="h-full w-full object-cover">
+              <img src="Aset foto/david alwie.jpeg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/LOGO.png';" alt="David Alwie Rusdi" class="h-full w-full object-cover object-top">
             </div>
             <h3 class="brand-font mt-4 text-xl font-extrabold text-[#04341f] sm:text-2xl">
               David Alwie Rusdi
@@ -498,11 +540,11 @@
           <div class="w-full relative">
             <div class="hidden sm:block absolute top-0 left-[16.666%] right-[16.666%] h-0.5 bg-[#0b7547]"></div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 w-full">
               <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
                 <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
                 <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-md">
-                  <img src="Aset foto/syahrianto.jpeg" loading="lazy" decoding="async" alt="Area Sales Manager" class="h-full w-full object-cover">
+                  <img src="Aset foto/syahrianto.jpeg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/LOGO.png';" alt="Syahrianto" class="h-full w-full object-cover object-top">
                 </div>
                 <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
                   Syahrianto
@@ -513,12 +555,13 @@
                 <p class="text-[11px] font-semibold text-[#66766f]">
                   Pemasaran &amp; Distribusi Agen
                 </p>
+                <div class="mt-6 h-6 w-0.5 bg-[#0b7547] sm:hidden"></div>
               </div>
 
               <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
                 <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
                 <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-md">
-                  <img src="Aset foto/buk novrika.jpeg" loading="lazy" decoding="async" alt="Manager HRD" class="h-full w-full object-cover">
+                  <img src="Aset foto/buk novrika.jpeg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/LOGO.png';" alt="Novrika Sari, S.Psi., MM" class="h-full w-full object-cover object-top">
                 </div>
                 <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
                   Novrika Sari, S.Psi., MM
@@ -529,12 +572,13 @@
                 <p class="text-[11px] font-semibold text-[#66766f]">
                   Pengembangan SDM &amp; Legalitas
                 </p>
+                <div class="mt-6 h-6 w-0.5 bg-[#0b7547] sm:hidden"></div>
               </div>
 
               <div class="relative flex flex-col items-center text-center pt-0 sm:pt-6">
                 <div class="hidden sm:block absolute top-0 h-6 w-0.5 bg-[#0b7547]"></div>
                 <div class="relative h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-full border-4 border-[#0b7547] shadow-md">
-                  <img src="Aset foto/WhatsApp Image 2026-10-12 at 14.45.56.jpeg" loading="lazy" decoding="async" alt="Internal Auditor" class="h-full w-full object-cover">
+                  <img src="Aset foto/WhatsApp Image 2026-10-12 at 14.45.56.jpeg" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='Aset foto/LOGO.png';" alt="Muhammad Trianto Desdio" class="h-full w-full object-cover object-top">
                 </div>
                 <h4 class="brand-font mt-3 text-lg font-extrabold text-[#04341f]">
                   Muhammad Trianto Desdio
@@ -672,29 +716,58 @@
       }
 
       // MENU MOBILE
+      const header = document.getElementById("site-header");
       const menuToggle = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
+      const iconMenu = document.getElementById("icon-menu");
+      const iconClose = document.getElementById("icon-close");
+
+      function setMenuState(open) {
+        if (!mobileMenu || !menuToggle) return;
+        mobileMenu.classList.toggle("hidden", !open);
+        menuToggle.setAttribute("aria-expanded", String(open));
+        if (iconMenu && iconClose) {
+          iconMenu.classList.toggle("hidden", open);
+          iconClose.classList.toggle("hidden", !open);
+        }
+      }
+
       if (menuToggle && mobileMenu) {
         menuToggle.addEventListener("click", () => {
-          const isHidden = mobileMenu.classList.toggle("hidden");
-          menuToggle.setAttribute("aria-expanded", String(!isHidden));
+          const isOpen = mobileMenu.classList.contains("hidden");
+          setMenuState(isOpen);
+        });
+
+        document.addEventListener("click", (e) => {
+          if (header && !header.contains(e.target) && !mobileMenu.classList.contains("hidden")) {
+            setMenuState(false);
+          }
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+            setMenuState(false);
+            menuToggle.focus();
+          }
         });
       }
 
       // HEADER & WHATSAPP SAAT SCROLL
-      const header = document.getElementById("site-header");
       const waFloat = document.getElementById("whatsapp-float");
 
       function handleScroll() {
-        if (window.scrollY > 30 && header) header.classList.add("scrolled");
-        else if (header) header.classList.remove("scrolled");
+        if (header) {
+          header.classList.toggle("scrolled", window.scrollY > 30);
+        }
 
-        if (window.scrollY > 220 && waFloat) {
-          waFloat.classList.remove("opacity-0", "pointer-events-none", "translate-y-6");
-          waFloat.classList.add("opacity-100", "translate-y-0");
-        } else if (waFloat) {
-          waFloat.classList.remove("opacity-100", "translate-y-0");
-          waFloat.classList.add("opacity-0", "pointer-events-none", "translate-y-6");
+        if (waFloat) {
+          if (window.scrollY > 220) {
+            waFloat.classList.remove("opacity-0", "pointer-events-none", "translate-y-6");
+            waFloat.classList.add("opacity-100", "translate-y-0");
+          } else {
+            waFloat.classList.remove("opacity-100", "translate-y-0");
+            waFloat.classList.add("opacity-0", "pointer-events-none", "translate-y-6");
+          }
         }
       }
       window.addEventListener("scroll", handleScroll, { passive: true });
